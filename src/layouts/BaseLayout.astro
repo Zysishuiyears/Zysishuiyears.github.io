@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import { localeMeta, siteUrl, type Locale } from '../data/site';
+
+interface Props {
+	locale: Locale;
+	title?: string;
+	description?: string;
+	canonicalPath?: string;
+	alternatePath: string;
+}
+
+const { locale, title, description, canonicalPath = Astro.url.pathname, alternatePath } = Astro.props;
+const meta = localeMeta[locale];
+const pageTitle = title ?? meta.title;
+const pageDescription = description ?? meta.description;
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+const alternateUrl = new URL(alternatePath, siteUrl).toString();
+const zhUrl = locale === 'zh' ? canonicalUrl : alternateUrl;
+const enUrl = locale === 'en' ? canonicalUrl : alternateUrl;
+const ogImage = new URL('/og-card.png', siteUrl).toString();
+
+const personSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Zhengxu Jiang',
+	alternateName: '姜政旭',
+	url: siteUrl,
+	email: 'mailto:jiangzhengxuoucstu@163.com',
+	affiliation: {
+		'@type': 'CollegeOrUniversity',
+		name: 'Nankai University',
+	},
+	sameAs: ['https://github.com/Zysishuiyears'],
+	knowsAbout: [
+		'Graph Theory',
+		'Graph Coloring',
+		'Graph Algorithms',
+		'Combinatorial Optimization',
+		'Graph Learning',
+	],
+};
+---
+
+<!doctype html>
+<html lang={meta.htmlLang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="color-scheme" content="light" />
+		<title>{pageTitle}</title>
+		<meta name="description" content={pageDescription} />
+		<link rel="canonical" href={canonicalUrl} />
+		<link rel="alternate" hreflang="zh-CN" href={zhUrl} />
+		<link rel="alternate" hreflang="en" href={enUrl} />
+		<link rel="alternate" hreflang="x-default" href={zhUrl} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Zhengxu Jiang" />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={pageDescription} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+	</head>
+	<body>
+		<a class="skip-link" href="#main-content">{locale === 'zh' ? '跳到主要内容' : 'Skip to main content'}</a>
+		<slot />
+		<script>
+			import '../scripts/motion';
+		</script>
+	</body>
+</html>

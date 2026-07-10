@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zysishuiyears.github.io/sitemap-index.xml

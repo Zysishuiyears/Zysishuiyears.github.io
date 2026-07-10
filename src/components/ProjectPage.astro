@@ -1,0 +1,77 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { homeContent, type Locale } from '../data/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import ProfileSidebar from './ProfileSidebar.astro';
+
+interface Props {
+	locale: Locale;
+	project: CollectionEntry<'projects'>;
+}
+
+const { locale, project } = Astro.props;
+const data = project.data;
+const homeHref = locale === 'zh' ? '/' : '/en/';
+const projectBase = locale === 'zh' ? '/projects' : '/en/projects';
+const canonicalPath = `${projectBase}/${data.slug}/`;
+const alternatePath = locale === 'zh' ? `/en/projects/${data.slug}/` : `/projects/${data.slug}/`;
+const content = homeContent[locale];
+
+const labels = locale === 'zh'
+	? {
+		back: '返回主页', problem: '问题背景', method: '数学与算法方法', role: '个人贡献', result: '结果与产出', workflow: '方法流程', technology: '技术与方法', repo: '查看代码仓库', paper: '查看论文', external: '在新窗口打开',
+	}
+	: {
+		back: 'Back to homepage', problem: 'Problem', method: 'Mathematical and algorithmic approach', role: 'My contribution', result: 'Results and outputs', workflow: 'Workflow', technology: 'Methods and tools', repo: 'View repository', paper: 'View paper', external: 'Opens in a new tab',
+	};
+---
+
+<BaseLayout
+	locale={locale}
+	title={`${data.title[locale]} | ${locale === 'zh' ? '姜政旭' : 'Zhengxu Jiang'}`}
+	description={data.summary[locale]}
+	canonicalPath={canonicalPath}
+	alternatePath={alternatePath}
+>
+	<Header locale={locale} switchHref={alternatePath} />
+	<main class="site-shell" id="main-content">
+		<ProfileSidebar locale={locale} />
+		<article class="content-column project-detail" data-intro>
+			<a class="back-link" href={`${homeHref}#projects`}><span aria-hidden="true">←</span> {labels.back}</a>
+			<header class="project-hero">
+				<p class="kicker"><time datetime={data.date.toISOString()}>{data.date.getFullYear()}</time> · {data.tags.slice(0, 2).join(' · ')}</p>
+				<h1>{data.title[locale]}</h1>
+				<p class="project-lead">{data.summary[locale]}</p>
+				<ul class="tag-list" aria-label={labels.technology}>
+					{data.tags.map((tag) => <li>{tag}</li>)}
+				</ul>
+				<div class="project-hero-actions">
+					{data.links.repo && <a class="button-link" href={data.links.repo} target="_blank" rel="noreferrer">{labels.repo}<span aria-hidden="true"> ↗</span><span class="sr-only">{labels.external}</span></a>}
+					{data.links.paper && <a class="button-link" href={data.links.paper} target="_blank" rel="noreferrer">{labels.paper}<span aria-hidden="true"> ↗</span><span class="sr-only">{labels.external}</span></a>}
+				</div>
+			</header>
+
+			<div class="project-narrative">
+				<section data-reveal><h2>{labels.problem}</h2><p>{data.problem[locale]}</p></section>
+				<section data-reveal><h2>{labels.method}</h2><p>{data.method[locale]}</p></section>
+				<section data-reveal><h2>{labels.role}</h2><p>{data.role[locale]}</p></section>
+				<section data-reveal><h2>{labels.result}</h2><p>{data.results[locale]}</p></section>
+			</div>
+
+			<section class="workflow-section" data-reveal>
+				<h2>{labels.workflow}</h2>
+				<ol>
+					{data.workflow.map((step, index) => (
+						<li><span>{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title[locale]}</h3><p>{step.description[locale]}</p></div></li>
+					))}
+				</ol>
+			</section>
+
+			<footer class="project-footer">
+				<a class="back-link" href={`${homeHref}#projects`}><span aria-hidden="true">←</span> {labels.back}</a>
+				<p>{content.profileRole}</p>
+			</footer>
+		</article>
+	</main>
+</BaseLayout>

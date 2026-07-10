@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { homeContent, type Locale } from '../data/site';
+
+interface Props {
+	locale: Locale;
+	projects: CollectionEntry<'projects'>[];
+}
+
+const { locale, projects } = Astro.props;
+const content = homeContent[locale];
+const projectBase = locale === 'zh' ? '/projects' : '/en/projects';
+---
+
+<div class="project-list">
+	{projects.map((project, index) => (
+		<article class="project-row" data-reveal style={`--reveal-order: ${index}`}>
+			<div class="project-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
+			<div class="project-body">
+				<p class="project-date"><time datetime={project.data.date.toISOString()}>{project.data.date.getFullYear()}</time></p>
+				<h3><a href={`${projectBase}/${project.data.slug}/`}>{project.data.title[locale]}</a></h3>
+				<p>{project.data.summary[locale]}</p>
+				<ul class="tag-list" aria-label={locale === 'zh' ? '项目标签' : 'Project tags'}>
+					{project.data.tags.slice(0, 5).map((tag) => <li>{tag}</li>)}
+				</ul>
+				<div class="project-actions">
+					<a class="text-link" href={`${projectBase}/${project.data.slug}/`}>{content.viewProject}<span aria-hidden="true"> →</span></a>
+					{project.data.links.repo && <a class="text-link secondary" href={project.data.links.repo} target="_blank" rel="noreferrer">{content.viewRepository}<span aria-hidden="true"> ↗</span></a>}
+					{project.data.links.paper && <a class="text-link secondary" href={project.data.links.paper} target="_blank" rel="noreferrer">{content.viewPaper}<span aria-hidden="true"> ↗</span></a>}
+				</div>
+			</div>
+		</article>
+	))}
+</div>

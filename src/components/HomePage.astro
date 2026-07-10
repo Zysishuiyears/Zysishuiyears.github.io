@@ -1,0 +1,133 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { githubUrl, homeContent, publicEmail, type Locale } from '../data/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import ProfileSidebar from './ProfileSidebar.astro';
+import ProjectList from './ProjectList.astro';
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+	locale: Locale;
+	projects: CollectionEntry<'projects'>[];
+}
+
+const { locale, projects } = Astro.props;
+const content = homeContent[locale];
+const switchHref = locale === 'zh' ? '/en/' : '/';
+const canonicalPath = locale === 'zh' ? '/' : '/en/';
+---
+
+<BaseLayout locale={locale} canonicalPath={canonicalPath} alternatePath={switchHref}>
+	<Header locale={locale} switchHref={switchHref} isHome />
+	<main class="site-shell" id="main-content">
+		<ProfileSidebar locale={locale} />
+		<article class="content-column">
+			<section class="about-section" aria-labelledby="about-title" data-intro>
+				<span class="anchor" id="about"></span>
+				<p class="kicker">Graph theory · Algorithms · Optimization</p>
+				<h2 id="about-title">{content.aboutTitle}</h2>
+				{content.intro.map((paragraph) => <p>{paragraph}</p>)}
+			</section>
+
+			<section class="content-section" aria-labelledby="research-heading">
+				<SectionHeading id="research" title={content.focusTitle} />
+				<p class="section-intro" data-reveal>{content.focusIntro}</p>
+				<ol class="focus-list">
+					{content.focusAreas.map((area, index) => (
+						<li data-reveal style={`--reveal-order: ${index}`}>
+							<span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+							<div><h3>{area.title}</h3><p>{area.description}</p></div>
+						</li>
+					))}
+				</ol>
+			</section>
+
+			<section class="content-section" aria-labelledby="projects-heading">
+				<SectionHeading id="projects" title={content.projectsTitle} />
+				<p class="section-intro" data-reveal>{content.projectsIntro}</p>
+				<ProjectList locale={locale} projects={projects} />
+			</section>
+
+			<section class="content-section" aria-labelledby="publications-heading">
+				<SectionHeading id="publications" title={content.publicationsTitle} />
+				<div class="publication-list">
+					{content.publications.map((publication) => (
+						<article class="publication-entry" data-reveal>
+							<div class="publication-date">{publication.date}</div>
+							<div>
+								<h3>{publication.link ? <a href={publication.link} target="_blank" rel="noreferrer">{publication.title}</a> : publication.title}</h3>
+								<p class="publication-authors">{publication.authors}</p>
+								<p class="publication-venue">{publication.venue}</p>
+								<p>{publication.description}</p>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="content-section" aria-labelledby="experience-heading">
+				<SectionHeading id="experience" title={content.experienceTitle} />
+				<div class="timeline-list">
+					{content.education.map((entry) => (
+						<article class="timeline-entry" data-reveal>
+							<div class="timeline-period">{entry.period}</div>
+							<div>
+								<h3>{entry.institution}</h3>
+								<p class="timeline-degree">{entry.degree}</p>
+								<p>{entry.details}</p>
+							</div>
+						</article>
+					))}
+				</div>
+
+				<h3 class="subsection-title" data-reveal>{content.selectedWorkTitle}</h3>
+				<div class="compact-entry-list">
+					{content.selectedWork.map((entry) => (
+						<article data-reveal>
+							<h4>{entry.title}</h4>
+							<p class="entry-meta">{entry.meta}</p>
+							<p>{entry.description}</p>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="content-section split-section" aria-label={locale === 'zh' ? '荣誉与技能' : 'Honors and skills'}>
+				<div>
+					<SectionHeading id="honors" title={content.honorsTitle} />
+					<ul class="simple-list">
+						{content.honors.map((honor) => <li data-reveal>{honor}</li>)}
+					</ul>
+				</div>
+				<div>
+					<SectionHeading id="skills" title={content.skillsTitle} />
+					<dl class="skills-list">
+						{content.skills.map((skill) => <div data-reveal><dt>{skill.label}</dt><dd>{skill.value}</dd></div>)}
+					</dl>
+				</div>
+			</section>
+
+			<section class="content-section" aria-labelledby="news-heading">
+				<SectionHeading id="news" title={content.newsTitle} />
+				<ul class="news-list">
+					{content.news.map((item) => <li data-reveal><time>{item.date}</time><span>{item.text}</span></li>)}
+				</ul>
+			</section>
+
+			<section class="content-section contact-section" aria-labelledby="contact-heading" data-reveal>
+				<SectionHeading id="contact" title={content.contactTitle} />
+				<p>{content.contactText}</p>
+				<div class="contact-links">
+					<a href={`mailto:${publicEmail}`}><span>{content.emailLabel}</span>{publicEmail}</a>
+					<a href={githubUrl} target="_blank" rel="noreferrer"><span>{content.githubLabel}</span>@Zysishuiyears</a>
+				</div>
+			</section>
+
+			<footer class="site-footer">
+				<p>© {new Date().getFullYear()} Zhengxu Jiang</p>
+				<p>{locale === 'zh' ? '使用 Astro 构建并部署于 GitHub Pages。' : 'Built with Astro and deployed on GitHub Pages.'}</p>
+			</footer>
+		</article>
+	</main>
+</BaseLayout>

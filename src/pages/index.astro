@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+import HomePage from '../components/HomePage.astro';
+
+const projects = (await getCollection('projects', ({ data }) => data.featured)).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<HomePage locale="zh" projects={projects} />

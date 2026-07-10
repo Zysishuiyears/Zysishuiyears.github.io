@@ -1,0 +1,45 @@
+---
+import { localeMeta, navItems, type Locale } from '../data/site';
+
+interface Props {
+	locale: Locale;
+	switchHref: string;
+	isHome?: boolean;
+}
+
+const { locale, switchHref, isHome = false } = Astro.props;
+const homeHref = locale === 'zh' ? '/' : '/en/';
+const label = localeMeta[locale];
+const menuLabel = locale === 'zh' ? '导航菜单' : 'Navigation menu';
+const items = navItems[locale];
+const resolveHref = (href: string) => (isHome ? href : `${homeHref}${href}`);
+---
+
+<header class="masthead" data-header>
+	<div class="masthead__inner">
+		<a class="site-name" href={homeHref} aria-label={locale === 'zh' ? '姜政旭主页' : 'Zhengxu Jiang homepage'}>
+			<span>{label.name}</span>
+			<small>{label.englishName}</small>
+		</a>
+
+		<nav class="desktop-nav" aria-label={menuLabel}>
+			<ul>
+				{items.map((item) => <li><a href={resolveHref(item.href)}>{item.label}</a></li>)}
+			</ul>
+		</nav>
+
+		<div class="header-actions">
+			<a class="language-switch" href={switchHref} hreflang={locale === 'zh' ? 'en' : 'zh-CN'}>
+				{label.shortLabel}
+			</a>
+			<details class="mobile-nav">
+				<summary aria-label={menuLabel}><span></span><span></span><span></span></summary>
+				<nav aria-label={menuLabel}>
+					<ul>
+						{items.map((item) => <li><a href={resolveHref(item.href)}>{item.label}</a></li>)}
+					</ul>
+				</nav>
+			</details>
+		</div>
+	</div>
+</header>
