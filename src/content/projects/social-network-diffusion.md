@@ -1,7 +1,6 @@
 ---
 slug: social-network-diffusion
 date: 2024-12-01
-featured: true
 title:
   zh: 社交网络信息传播与信息茧房建模
   en: Information Diffusion and Echo Chambers in Social Networks
@@ -46,5 +45,6 @@ tags:
   - LeaderRank
   - k-core
 links:
+  repo: https://github.com/Zysishuiyears/scream-effect-propagation-simulation
   paper: https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09
 ---

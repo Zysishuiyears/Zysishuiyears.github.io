@@ -1,7 +1,6 @@
 ---
 slug: signed-circular-edge-coloring
 date: 2026-07-01
-featured: true
 title:
   zh: 符号图圆环边染色的精确计算
   en: Exact Circular Edge Coloring of Signed Graphs

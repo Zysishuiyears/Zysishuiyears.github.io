@@ -449,6 +449,9 @@ a {
 }
 
 .about-section h2 {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
 	margin-bottom: 1rem;
 	font-size: clamp(1.75rem, 4vw, 2.35rem);
 	font-weight: 720;
@@ -467,7 +470,7 @@ a {
 
 .section-heading {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 1.15rem;
 	padding-bottom: 0.65rem;
@@ -475,22 +478,33 @@ a {
 	scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
+.section-heading__title {
+	display: flex;
+	align-items: center;
+	min-width: 0;
+	gap: 0.62rem;
+}
+
+.section-heading__icon {
+	display: inline-grid;
+	flex: 0 0 auto;
+	width: 1.35em;
+	place-items: center;
+	font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+	font-size: 1.22rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.about-section .section-heading__icon {
+	font-size: 0.82em;
+}
+
 .section-heading h2 {
 	margin: 0;
 	font-size: 1.48rem;
 	font-weight: 720;
 	letter-spacing: -0.025em;
-}
-
-.section-heading h2::before {
-	display: inline-block;
-	width: 5px;
-	height: 1.05em;
-	margin-right: 0.62rem;
-	transform: translateY(0.12em);
-	border-radius: 1px;
-	background: var(--accent);
-	content: "";
 }
 
 .section-heading p {
@@ -541,7 +555,7 @@ a {
 }
 
 .project-list {
-	border-top: 1px solid var(--border-soft);
+	border-top: 0;
 }
 
 .project-row {
@@ -564,6 +578,10 @@ a {
 }
 
 .project-row h3 {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.45rem;
 	margin-bottom: 0.45rem;
 	font-family: var(--serif);
 	font-size: 1.16rem;
@@ -602,14 +620,6 @@ a {
 	line-height: 1.45;
 }
 
-.project-actions {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.9rem;
-	margin-top: 0.7rem;
-}
-
-.text-link,
 .back-link {
 	color: var(--accent);
 	font-size: 0.82rem;
@@ -617,13 +627,8 @@ a {
 	text-decoration: none;
 }
 
-.text-link:hover,
 .back-link:hover {
 	text-decoration: underline;
-}
-
-.text-link.secondary {
-	color: var(--text-soft);
 }
 
 .publication-entry,
@@ -653,8 +658,30 @@ a {
 	font-family: var(--serif);
 }
 
-.publication-entry h3 a {
-	color: var(--text);
+.publication-entry h3 {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.5rem;
+}
+
+.resource-links {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.38rem;
+	font-family: var(--sans);
+}
+
+.resource-link {
+	color: var(--accent);
+	font-size: 0.76em;
+	font-weight: 650;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.resource-link:hover {
+	text-decoration: underline;
 }
 
 .publication-entry p,
@@ -675,17 +702,12 @@ a {
 	font-style: italic;
 }
 
-.subsection-title {
-	margin: 2rem 0 0.7rem;
-	font-size: 1.04rem;
-}
-
 .compact-entry-list article {
 	padding: 0.9rem 0;
 	border-bottom: 1px solid var(--border-soft);
 }
 
-.compact-entry-list h4 {
+.compact-entry-list h3 {
 	margin-bottom: 0.2rem;
 	font-size: 0.96rem;
 }
@@ -1175,7 +1197,6 @@ a {
 @media print {
 	.masthead,
 	.graph-motif,
-	.project-actions,
 	.project-hero-actions,
 	.skip-link {
 		display: none !important;

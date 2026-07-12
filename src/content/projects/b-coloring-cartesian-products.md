@@ -1,7 +1,6 @@
 ---
 slug: b-coloring-cartesian-products
 date: 2026-06-01
-featured: true
 title:
   zh: 笛卡尔积图的 B-coloring 与 SAT 求解
   en: B-coloring of Cartesian Products with SAT

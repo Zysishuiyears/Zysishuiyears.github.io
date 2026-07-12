@@ -26,48 +26,12 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 			<section class="about-section" aria-labelledby="about-title" data-intro>
 				<span class="anchor" id="about"></span>
 				<p class="kicker">Graph theory · Algorithms · Optimization</p>
-				<h2 id="about-title">{content.aboutTitle}</h2>
+				<h2 id="about-title"><span class="section-heading__icon" aria-hidden="true">👋</span>{content.aboutTitle}</h2>
 				{content.intro.map((paragraph) => <p>{paragraph}</p>)}
 			</section>
 
-			<section class="content-section" aria-labelledby="research-heading">
-				<SectionHeading id="research" title={content.focusTitle} />
-				<p class="section-intro" data-reveal>{content.focusIntro}</p>
-				<ol class="focus-list">
-					{content.focusAreas.map((area, index) => (
-						<li data-reveal style={`--reveal-order: ${index}`}>
-							<span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-							<div><h3>{area.title}</h3><p>{area.description}</p></div>
-						</li>
-					))}
-				</ol>
-			</section>
-
-			<section class="content-section" aria-labelledby="projects-heading">
-				<SectionHeading id="projects" title={content.projectsTitle} />
-				<p class="section-intro" data-reveal>{content.projectsIntro}</p>
-				<ProjectList locale={locale} projects={projects} />
-			</section>
-
-			<section class="content-section" aria-labelledby="publications-heading">
-				<SectionHeading id="publications" title={content.publicationsTitle} />
-				<div class="publication-list">
-					{content.publications.map((publication) => (
-						<article class="publication-entry" data-reveal>
-							<div class="publication-date">{publication.date}</div>
-							<div>
-								<h3>{publication.link ? <a href={publication.link} target="_blank" rel="noreferrer">{publication.title}</a> : publication.title}</h3>
-								<p class="publication-authors">{publication.authors}</p>
-								<p class="publication-venue">{publication.venue}</p>
-								<p>{publication.description}</p>
-							</div>
-						</article>
-					))}
-				</div>
-			</section>
-
 			<section class="content-section" aria-labelledby="experience-heading">
-				<SectionHeading id="experience" title={content.experienceTitle} />
+				<SectionHeading id="experience" title={content.experienceTitle} icon="🎓" />
 				<div class="timeline-list">
 					{content.education.map((entry) => (
 						<article class="timeline-entry" data-reveal>
@@ -80,12 +44,55 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 						</article>
 					))}
 				</div>
+			</section>
 
-				<h3 class="subsection-title" data-reveal>{content.selectedWorkTitle}</h3>
+			<section class="content-section" aria-labelledby="research-heading">
+				<SectionHeading id="research" title={content.focusTitle} icon="🔬" />
+				<p class="section-intro" data-reveal>{content.focusIntro}</p>
+				<ol class="focus-list">
+					{content.focusAreas.map((area, index) => (
+						<li data-reveal style={`--reveal-order: ${index}`}>
+							<span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+							<div><h3>{area.title}</h3><p>{area.description}</p></div>
+						</li>
+					))}
+				</ol>
+			</section>
+
+			<section class="content-section" aria-labelledby="projects-heading">
+				<SectionHeading id="projects" title={content.projectsTitle} icon="💻" />
+				<ProjectList locale={locale} projects={projects} />
+			</section>
+
+			<section class="content-section" aria-labelledby="publications-heading">
+				<SectionHeading id="publications" title={content.publicationsTitle} icon="📝" />
+				<div class="publication-list">
+					{content.publications.map((publication) => (
+						<article class="publication-entry" data-reveal>
+							<div class="publication-date">{publication.date}</div>
+							<div>
+								<h3>
+									<span>{publication.title}</span>
+									<span class="resource-links">
+										{publication.link && <a class="resource-link" href={publication.link} target="_blank" rel="noreferrer">[paper]</a>}
+										{publication.repository && <a class="resource-link" href={publication.repository} target="_blank" rel="noreferrer">[code]</a>}
+									</span>
+								</h3>
+								<p class="publication-authors">{publication.authors}</p>
+								<p class="publication-venue">{publication.venue}</p>
+								<p>{publication.description}</p>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="content-section" aria-labelledby="modeling-heading">
+				<SectionHeading id="modeling" title={content.selectedWorkTitle} icon="📐" />
 				<div class="compact-entry-list">
 					{content.selectedWork.map((entry) => (
 						<article data-reveal>
-							<h4>{entry.title}</h4>
+							<h3>{entry.title}</h3>
 							<p class="entry-meta">{entry.meta}</p>
 							<p>{entry.description}</p>
 						</article>
@@ -95,13 +102,13 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 
 			<section class="content-section split-section" aria-label={locale === 'zh' ? '荣誉与技能' : 'Honors and skills'}>
 				<div>
-					<SectionHeading id="honors" title={content.honorsTitle} />
+					<SectionHeading id="honors" title={content.honorsTitle} icon="🏆" />
 					<ul class="simple-list">
 						{content.honors.map((honor) => <li data-reveal>{honor}</li>)}
 					</ul>
 				</div>
 				<div>
-					<SectionHeading id="skills" title={content.skillsTitle} />
+					<SectionHeading id="skills" title={content.skillsTitle} icon="🛠️" />
 					<dl class="skills-list">
 						{content.skills.map((skill) => <div data-reveal><dt>{skill.label}</dt><dd>{skill.value}</dd></div>)}
 					</dl>
@@ -109,14 +116,14 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 			</section>
 
 			<section class="content-section" aria-labelledby="news-heading">
-				<SectionHeading id="news" title={content.newsTitle} />
+				<SectionHeading id="news" title={content.newsTitle} icon="🔥" />
 				<ul class="news-list">
 					{content.news.map((item) => <li data-reveal><time>{item.date}</time><span>{item.text}</span></li>)}
 				</ul>
 			</section>
 
 			<section class="content-section contact-section" aria-labelledby="contact-heading" data-reveal>
-				<SectionHeading id="contact" title={content.contactTitle} />
+				<SectionHeading id="contact" title={content.contactTitle} icon="✉️" />
 				<p>{content.contactText}</p>
 				<div class="contact-links">
 					<a href={`mailto:${publicEmail}`}><span>{content.emailLabel}</span>{publicEmail}</a>

@@ -1,7 +1,6 @@
 ---
 slug: npu-cache-aware-scheduling
 date: 2025-09-01
-featured: true
 title:
   zh: 面向 NPU 的缓存感知 DAG 调度与流水优化
   en: Cache-aware DAG Scheduling for NPUs

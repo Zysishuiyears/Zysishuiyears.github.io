@@ -12,7 +12,6 @@ const projects = defineCollection({
 	schema: z.object({
 		slug: z.string(),
 		date: z.coerce.date(),
-		featured: z.boolean().default(true),
 		title: localizedText,
 		summary: localizedText,
 		problem: localizedText,

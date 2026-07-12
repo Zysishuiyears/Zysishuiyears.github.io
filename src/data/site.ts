@@ -30,17 +30,17 @@ export const localeMeta = {
 export const navItems = {
 	zh: [
 		{ href: '#about', label: '首页' },
+		{ href: '#experience', label: '教育经历' },
 		{ href: '#research', label: '研究方向' },
 		{ href: '#projects', label: '项目' },
-		{ href: '#experience', label: '经历' },
 		{ href: '#news', label: '动态' },
 		{ href: '#contact', label: '联系' },
 	],
 	en: [
 		{ href: '#about', label: 'Home' },
+		{ href: '#experience', label: 'Education' },
 		{ href: '#research', label: 'Research' },
 		{ href: '#projects', label: 'Projects' },
-		{ href: '#experience', label: 'Experience' },
 		{ href: '#news', label: 'News' },
 		{ href: '#contact', label: 'Contact' },
 	],
@@ -73,11 +73,7 @@ export const homeContent = {
 				description: '图表示学习、图记忆、图语言模型与图增强智能体。',
 			},
 		],
-		projectsTitle: '精选项目',
-		projectsIntro: '以下项目展示了从数学结构分析、约束建模到算法实现和实验验证的完整过程。',
-		viewProject: '查看项目详情',
-		viewRepository: '代码仓库',
-		viewPaper: '论文',
+		projectsTitle: '项目',
 		publicationsTitle: '论文与研究成果',
 		publications: [
 			{
@@ -88,6 +84,7 @@ export const homeContent = {
 				description:
 					'利用次可加不等式、匹配分解、周期构造与局部结构分析研究路、圈及其笛卡尔积上的 B-coloring，并使用 SAT 求解辅助小规模搜索。',
 				link: undefined,
+				repository: 'https://github.com/Zysishuiyears/Graph-Theory-B-coloring-of-Cartesian-products',
 			},
 			{
 				title: '尖叫效应传播机制及仿真研究',
@@ -97,9 +94,10 @@ export const homeContent = {
 				description:
 					'第一作者。将信息异常放大建模为加权有向网络，结合 SEIR、脉冲函数、LeaderRank 与 k-core 分析传播机制和干预策略。',
 				link: 'https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09',
+				repository: 'https://github.com/Zysishuiyears/scream-effect-propagation-simulation',
 			},
 		],
-		experienceTitle: '教育与经历',
+		experienceTitle: '教育经历',
 		education: [
 			{
 				institution: '南开大学 · 数学科学学院',
@@ -186,11 +184,7 @@ export const homeContent = {
 				description: 'Graph representation learning, graph memory, graph language models, and graph-augmented agents.',
 			},
 		],
-		projectsTitle: 'Selected Projects',
-		projectsIntro: 'These projects connect mathematical structure, constraint models, algorithm implementation, and reproducible experimentation.',
-		viewProject: 'Project details',
-		viewRepository: 'Repository',
-		viewPaper: 'Paper',
+		projectsTitle: 'Projects',
 		publicationsTitle: 'Publications and Research',
 		publications: [
 			{
@@ -201,6 +195,7 @@ export const homeContent = {
 				description:
 					'Studies B-coloring on paths, cycles, and Cartesian products using subadditive inequalities, matching decompositions, periodic constructions, local analysis, and SAT-assisted search.',
 				link: undefined,
+				repository: 'https://github.com/Zysishuiyears/Graph-Theory-B-coloring-of-Cartesian-products',
 			},
 			{
 				title: 'Propagation Mechanism and Simulation Study of the “Scream Effect”',
@@ -210,9 +205,10 @@ export const homeContent = {
 				description:
 					'First-author paper modeling anomalous information amplification as a weighted directed network with SEIR dynamics, pulse functions, LeaderRank, and k-core analysis.',
 				link: 'https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09',
+				repository: 'https://github.com/Zysishuiyears/scream-effect-propagation-simulation',
 			},
 		],
-		experienceTitle: 'Education and Experience',
+		experienceTitle: 'Education',
 		education: [
 			{
 				institution: 'Nankai University · School of Mathematical Sciences',
