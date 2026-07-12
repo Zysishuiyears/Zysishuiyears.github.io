@@ -39,6 +39,7 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 							<div>
 								<h3>{entry.institution}</h3>
 								<p class="timeline-degree">{entry.degree}</p>
+								{entry.advisor && <p class="timeline-advisor"><a href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a></p>}
 								<p>{entry.details}</p>
 							</div>
 						</article>

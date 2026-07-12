@@ -696,6 +696,11 @@ a {
 	font-weight: 620;
 }
 
+.timeline-advisor a {
+	color: var(--accent);
+	font-weight: 650;
+}
+
 .publication-venue,
 .entry-meta {
 	color: var(--graph);
