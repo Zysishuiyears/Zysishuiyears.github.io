@@ -109,9 +109,15 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 					{content.academicActivities.map((entry) => (
 						<article class="timeline-entry" data-reveal>
 							<div class="timeline-period">{entry.period}</div>
-							<div>
+							<div class="activity-headline">
 								<h3>{entry.title}</h3>
-								<p>{entry.meta}</p>
+								<span class="education-separator" aria-hidden="true">·</span>
+								<span class="activity-detail">{entry.city}</span>
+								<span class="education-separator" aria-hidden="true">·</span>
+								{entry.institutionFull
+									? <abbr class="activity-detail" title={entry.institutionFull}>{entry.institution}</abbr>
+									: <span class="activity-detail">{entry.institution}</span>}
+								{entry.status && <><span class="education-separator" aria-hidden="true">·</span><span class="activity-status">{entry.status}</span></>}
 							</div>
 						</article>
 					))}

@@ -700,6 +700,33 @@ a {
 	font-weight: 750;
 }
 
+.activity-headline {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.22rem 0.48rem;
+}
+
+.activity-headline h3 {
+	margin: 0;
+	font-family: var(--sans);
+	font-size: 1rem;
+	font-weight: 750;
+}
+
+.activity-detail {
+	color: var(--text-soft);
+}
+
+abbr.activity-detail {
+	text-decoration: none;
+}
+
+.activity-status {
+	color: var(--graph);
+	font-weight: 650;
+}
+
 .education-degree {
 	color: var(--text);
 	font-weight: 650;
@@ -1038,6 +1065,20 @@ a {
 
 	.site-shell {
 		gap: 2.6rem;
+	}
+}
+
+@media (max-width: 1080px) {
+	.desktop-nav {
+		display: none;
+	}
+
+	.mobile-nav {
+		display: block;
+	}
+
+	.header-actions {
+		margin-left: auto;
 	}
 }
 
