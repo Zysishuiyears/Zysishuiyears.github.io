@@ -62,11 +62,6 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 				</ol>
 			</section>
 
-			<section class="content-section" aria-labelledby="projects-heading">
-				<SectionHeading id="projects" title={content.projectsTitle} icon="💻" />
-				<ProjectList locale={locale} projects={projects} />
-			</section>
-
 			<section class="content-section" aria-labelledby="publications-heading">
 				<SectionHeading id="publications" title={content.publicationsTitle} icon="📝" />
 				<div class="publication-list">
@@ -88,6 +83,11 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 						</article>
 					))}
 				</div>
+			</section>
+
+			<section class="content-section" aria-labelledby="projects-heading">
+				<SectionHeading id="projects" title={content.projectsTitle} icon="💻" />
+				<ProjectList locale={locale} projects={projects} />
 			</section>
 
 			<section class="content-section" aria-labelledby="modeling-heading">

@@ -14,11 +14,11 @@ method:
   zh: 将传播关系建模为加权有向图，结合 SEIR、脉冲函数、LeaderRank 与 k-core 分析传播和干预；在后续项目中加入意见值、边权和反馈调整机制模拟信息茧房演化。
   en: The work models diffusion as a weighted directed graph and combines SEIR dynamics, pulse functions, LeaderRank, and k-core analysis; a follow-up model adds opinion values, edge weights, and feedback adjustment to simulate echo-chamber evolution.
 results:
-  zh: 形成第一作者论文《尖叫效应传播机制及仿真研究》，并完成校级本科生研究发展计划优秀结项。
-  en: The work led to the first-author paper “Propagation Mechanism and Simulation Study of the Scream Effect” and an undergraduate research project rated Excellent.
+  zh: 形成论文《尖叫效应传播机制及仿真研究》；校级科研训练项目“社交网络中‘信息茧房’效应的机理研究”以“优秀”等次结项。
+  en: The work led to the paper “Propagation Mechanism and Simulation Study of the Scream Effect”; the university-level research training project “Mechanisms of the ‘Information Cocoon’ Effect in Social Networks” concluded with an Excellent rating.
 role:
-  zh: 担任项目负责人和论文第一作者，负责模型设计、仿真实验、结构分析与论文写作。
-  en: Served as project lead and first author, responsible for model design, simulation, structural analysis, and manuscript preparation.
+  zh: 担任项目负责人，负责模型设计、仿真实验、结构分析与论文写作。
+  en: Served as project lead, responsible for model design, simulation, structural analysis, and manuscript preparation.
 workflow:
   - title:
       zh: 网络表示
