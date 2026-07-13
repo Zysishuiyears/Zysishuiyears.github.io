@@ -133,6 +133,19 @@ export const homeContent = {
 				paper: '/papers/2022-cumcm-uav-localization.pdf',
 			},
 		],
+		academicActivitiesTitle: '学术交流与活动',
+		academicActivities: [
+			{
+				period: '2026.08.11 – 08.20',
+				title: '“组合与图论”暑期课程',
+				meta: '北京邮电大学 · 计划参加',
+			},
+			{
+				period: '2023.03.10 – 03.11',
+				title: '2022 年深圳杯颁奖典礼与研讨会',
+				meta: '深圳北理莫斯科大学',
+			},
+		],
 		honorsTitle: '奖励与荣誉',
 		honors: [
 			'南开大学陈省身新生奖学金（2025.09）',
@@ -252,6 +265,19 @@ export const homeContent = {
 				meta: '2022 CUMCM · National Second Prize',
 				description: 'Bearing-only localization and formation correction based on geometric constraints and triangulation.',
 				paper: '/papers/2022-cumcm-uav-localization.pdf',
+			},
+		],
+		academicActivitiesTitle: 'Academic Activities',
+		academicActivities: [
+			{
+				period: 'Aug. 11–20, 2026',
+				title: 'Summer Course on Combinatorics and Graph Theory',
+				meta: 'Beijing University of Posts and Telecommunications · Upcoming',
+			},
+			{
+				period: 'Mar. 10–11, 2023',
+				title: '2022 Shenzhen Cup Award Ceremony and Symposium',
+				meta: 'Shenzhen MSU-BIT University',
 			},
 		],
 		honorsTitle: 'Awards and Honors',
