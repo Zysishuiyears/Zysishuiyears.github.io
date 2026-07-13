@@ -642,17 +642,6 @@ a {
 	line-height: 1.55;
 }
 
-.publication-entry h3 {
-	margin-bottom: 0.3rem;
-	font-size: 1rem;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	gap: 0.5rem;
-	font-family: var(--sans);
-	font-weight: 750;
-}
-
 .resource-links {
 	display: inline-flex;
 	flex-wrap: wrap;
@@ -660,9 +649,16 @@ a {
 	font-family: var(--sans);
 }
 
+.resource-link-shell {
+	color: var(--text);
+	font-size: 0.76em;
+	font-weight: 650;
+	white-space: nowrap;
+}
+
 .resource-link {
 	color: var(--resource-link);
-	font-size: 0.76em;
+	font-size: inherit;
 	font-weight: 650;
 	text-decoration: underline;
 	text-decoration-thickness: 0.08em;
@@ -683,6 +679,24 @@ a {
 .publication-authors {
 	color: var(--text);
 	font-weight: 400;
+}
+
+.publication-citation {
+	color: var(--text);
+	line-height: 1.75;
+}
+
+.publication-title {
+	font-weight: 750;
+}
+
+.publication-note {
+	color: var(--text-faint);
+	font-size: 0.8rem !important;
+}
+
+.publication-description {
+	color: var(--text-soft);
 }
 
 .education-headline {
@@ -755,7 +769,6 @@ abbr.activity-detail {
 	text-underline-offset: 0.18em;
 }
 
-.publication-venue,
 .entry-meta {
 	color: var(--graph);
 	font-style: italic;
@@ -1093,6 +1106,47 @@ abbr.activity-detail {
 
 .education-section__content li::marker {
 	color: var(--accent);
+}
+
+.education-experience-list {
+	display: grid;
+	gap: 1rem;
+}
+
+.education-experience {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--border-soft);
+}
+
+.education-experience:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.education-experience__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
+	margin-bottom: 0.55rem;
+}
+
+.education-experience__head h3 {
+	margin: 0;
+	font-family: var(--sans);
+	font-size: 0.95rem;
+	font-weight: 750;
+}
+
+.education-experience__head time {
+	flex: 0 0 auto;
+	color: var(--text-faint);
+	font-size: 0.78rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.education-footer {
+	justify-content: flex-start;
 }
 
 .not-found {

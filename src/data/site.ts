@@ -84,8 +84,10 @@ export const homeContent = {
 		publications: [
 			{
 				title: 'B-coloring of Cartesian Products of Paths and Cycles',
-				authors: 'Zhengxu Jiang, Jiaao Li（数学类论文严格字母排序）',
-				venue: 'Submitted manuscript',
+				authors: 'Zhengxu Jiang, Jiaao Li',
+				citationMarker: '.',
+				citationDetails: 'Submitted manuscript, 2026.',
+				note: '数学类论文严格字母排序',
 				date: '2026.06',
 				description:
 					'利用次可加不等式、匹配分解、周期构造与局部结构分析研究路、圈及其笛卡尔积上的 B-coloring，并使用 SAT 求解辅助小规模搜索。',
@@ -94,8 +96,10 @@ export const homeContent = {
 			},
 			{
 				title: '尖叫效应传播机制及仿真研究',
-				authors: '姜政旭、姚嘉祺、孟令钧、王建、曹永昌',
-				venue: '《数学建模及其应用》12(4): 64–72+106',
+				authors: '姜政旭，姚嘉祺，孟令钧，王建，曹永昌',
+				citationMarker: '[J].',
+				citationDetails: '数学建模及其应用, 2023, 12(4): 64–72, 106. DOI: 10.19943/j.2095-3070.jmmia.2023.04.09.',
+				note: undefined,
 				date: '2023.12',
 				description:
 					'将信息异常放大建模为加权有向网络，结合 SEIR、脉冲函数、LeaderRank 与 k-core 分析传播机制和干预策略。',
@@ -111,7 +115,7 @@ export const homeContent = {
 				degree: '应用数学硕士（图论与组合优化）',
 				period: '2025.09 – 2028.06（预计）',
 				advisor: { label: '导师：李佳傲教授', url: 'https://www.lijiaao-dm-nk.com/' },
-				details: '保研录取；专业排名前 20%；研究方向为图论与组合优化。',
+				details: '保研录取；研究方向为图论与组合优化。',
 			},
 			{
 				slug: 'ouc',
@@ -226,8 +230,10 @@ export const homeContent = {
 		publications: [
 			{
 				title: 'B-coloring of Cartesian Products of Paths and Cycles',
-				authors: 'Zhengxu Jiang, Jiaao Li (authors listed in strict alphabetical order, as customary in mathematics)',
-				venue: 'Submitted manuscript',
+				authors: 'Zhengxu Jiang and Jiaao Li',
+				citationMarker: '.',
+				citationDetails: 'Submitted manuscript, 2026.',
+				note: 'Authors are listed in strict alphabetical order, as customary in mathematics.',
 				date: '2026.06',
 				description:
 					'Studies B-coloring on paths, cycles, and Cartesian products using subadditive inequalities, matching decompositions, periodic constructions, local analysis, and SAT-assisted search.',
@@ -236,8 +242,10 @@ export const homeContent = {
 			},
 			{
 				title: 'Propagation Mechanism and Simulation Study of the “Scream Effect”',
-				authors: 'Zhengxu Jiang, Jiaqi Yao, Lingjun Meng, Jian Wang, Yongchang Cao',
-				venue: 'Mathematical Modeling and Its Applications 12(4): 64–72+106',
+				authors: 'Zhengxu Jiang, Jiaqi Yao, Lingjun Meng, Jian Wang, and Yongchang Cao',
+				citationMarker: '.',
+				citationDetails: 'Mathematical Modeling and Its Applications 12, no. 4 (2023): 64–72, 106. https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09.',
+				note: undefined,
 				date: 'Dec. 2023',
 				description:
 					'Models anomalous information amplification as a weighted directed network using SEIR dynamics, pulse functions, LeaderRank, and k-core analysis.',
@@ -253,7 +261,7 @@ export const homeContent = {
 				degree: 'M.S. in Applied Mathematics',
 				period: 'Sep. 2025 – Jun. 2028 (expected)',
 				advisor: { label: 'Advisor: Prof. Jiaao Li', url: 'https://www.lijiaao-dm-nk.com/' },
-				details: 'Admitted through graduate recommendation; top 20% in the program; research focus: Graph Theory and Combinatorial Optimization.',
+				details: 'Admitted through graduate recommendation; research focus: Graph Theory and Combinatorial Optimization.',
 			},
 			{
 				slug: 'ouc',

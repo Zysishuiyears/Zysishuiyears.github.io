@@ -70,16 +70,16 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 						<article class="publication-entry" data-reveal>
 							<div class="publication-date">{publication.date}</div>
 							<div>
-								<h3>
-									<span>{publication.title}</span>
+								<p class="publication-citation">
+									<span class="publication-authors">{publication.authors}. </span>
+									<strong class="publication-title">{publication.title}</strong><span>{publication.citationMarker} {publication.citationDetails}</span>
 									<span class="resource-links">
-										{publication.link && <a class="resource-link" href={publication.link} target="_blank" rel="noreferrer">[paper]</a>}
-										{publication.repository && <a class="resource-link" href={publication.repository} target="_blank" rel="noreferrer">[code]</a>}
+										{publication.link && <span class="resource-link-shell">[<a class="resource-link" href={publication.link} target="_blank" rel="noreferrer">paper</a>]</span>}
+										{publication.repository && <span class="resource-link-shell">[<a class="resource-link" href={publication.repository} target="_blank" rel="noreferrer">code</a>]</span>}
 									</span>
-								</h3>
-								<p class="publication-authors">{publication.authors}</p>
-								<p class="publication-venue">{publication.venue}</p>
-								<p>{publication.description}</p>
+								</p>
+								{publication.note && <p class="publication-note">{locale === 'zh' ? `（${publication.note}）` : `(${publication.note})`}</p>}
+								<p class="publication-description">{publication.description}</p>
 							</div>
 						</article>
 					))}
@@ -96,7 +96,7 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 				<div class="compact-entry-list">
 					{content.selectedWork.map((entry) => (
 						<article data-reveal>
-							<h3><span>{entry.title}</span><span class="resource-links"><a class="resource-link" href={entry.paper} target="_blank" rel="noreferrer">[paper]</a></span></h3>
+							<h3><span>{entry.title}</span><span class="resource-links"><span class="resource-link-shell">[<a class="resource-link" href={entry.paper} target="_blank" rel="noreferrer">paper</a>]</span></span></h3>
 							<p class="entry-meta">{entry.meta}</p>
 							<p>{entry.description}</p>
 						</article>

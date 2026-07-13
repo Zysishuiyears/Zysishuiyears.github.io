@@ -1,6 +1,6 @@
 ---
 import type { EducationProfile } from '../data/education';
-import { homeContent, type Locale } from '../data/site';
+import type { Locale } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from './Header.astro';
 import ProfileSidebar from './ProfileSidebar.astro';
@@ -15,7 +15,6 @@ const homeHref = locale === 'zh' ? '/' : '/en/';
 const educationBase = locale === 'zh' ? '/education' : '/en/education';
 const canonicalPath = `${educationBase}/${profile.slug}/`;
 const alternatePath = locale === 'zh' ? `/en/education/${profile.slug}/` : `/education/${profile.slug}/`;
-const content = homeContent[locale];
 const labels = locale === 'zh'
 	? { back: '返回教育经历', external: '在新窗口打开' }
 	: { back: 'Back to education', external: 'Opens in a new tab' };
@@ -61,14 +60,28 @@ const labels = locale === 'zh'
 									{section.items[locale].map((item) => <li>{item}</li>)}
 								</ul>
 							)}
+							{section.experiences && (
+								<div class="education-experience-list">
+									{section.experiences.map((experience) => (
+										<article class="education-experience">
+											<div class="education-experience__head">
+												<h3>{experience.role[locale]}</h3>
+												<time>{experience.period[locale]}</time>
+											</div>
+											<ul>
+												{experience.details[locale].map((detail) => <li>{detail}</li>)}
+											</ul>
+										</article>
+									))}
+								</div>
+							)}
 						</div>
 					</section>
 				))}
 			</div>
 
-			<footer class="project-footer">
+			<footer class="project-footer education-footer">
 				<a class="back-link" href={`${homeHref}#experience`}><span aria-hidden="true">←</span> {labels.back}</a>
-				<p>{content.profileRole}</p>
 			</footer>
 		</article>
 	</main>
