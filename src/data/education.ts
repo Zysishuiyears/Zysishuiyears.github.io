@@ -51,8 +51,8 @@ export const educationProfiles = [
 			{
 				title: { zh: '主修课程', en: 'Major coursework' },
 				items: {
-					zh: ['图论', '极值图论', '图同态与图极限', '深度学习', '泛函分析', '测度论与概率论基础', '构造组合学'],
-					en: ['Graph Theory', 'Extremal Graph Theory', 'Graph Homomorphisms and Graph Limits', 'Deep Learning', 'Functional Analysis', 'Foundations of Measure Theory and Probability', 'Constructive Combinatorics'],
+					zh: ['图论', '深度学习', '泛函分析', '测度论与概率论基础', '构造组合学', '极值图论', '图同态与图极限'],
+					en: ['Graph Theory', 'Deep Learning', 'Functional Analysis', 'Foundations of Measure Theory and Probability', 'Constructive Combinatorics', 'Extremal Graph Theory', 'Graph Homomorphisms and Graph Limits'],
 				},
 			},
 			{

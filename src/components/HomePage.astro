@@ -39,9 +39,13 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 							<div class="timeline-period">{entry.period}</div>
 							<div>
 								<div class="education-headline">
-									<h3><a class="education-title-link" href={`${educationBase}/${entry.slug}/`}>{entry.institution}</a></h3>
-									<span class="education-separator" aria-hidden="true">·</span>
-									<strong class="education-degree">{entry.degree}</strong>
+									<h3>
+										<a class="education-entry-link" href={`${educationBase}/${entry.slug}/`}>
+											<span>{entry.institution}</span>
+											<span class="education-separator" aria-hidden="true">·</span>
+											<span class="education-degree">{entry.degree}</span>
+										</a>
+									</h3>
 									{entry.advisor && <><span class="education-separator" aria-hidden="true">·</span><a class="education-advisor" href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a></>}
 								</div>
 							</div>

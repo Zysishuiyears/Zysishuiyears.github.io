@@ -33,17 +33,19 @@ const labels = locale === 'zh'
 		<article class="content-column project-detail education-detail" data-intro>
 			<a class="back-link" href={`${homeHref}#experience`}><span aria-hidden="true">←</span> {labels.back}</a>
 			<header class="project-hero education-hero">
-				<p class="kicker">{profile.location[locale]} · {profile.period[locale]}</p>
-				<h1>{profile.institution[locale]}</h1>
-				<p class="education-degree-line">{profile.school[locale]} · {profile.degree[locale]}</p>
-				{profile.showSummary !== false && <p class="project-lead">{profile.summary[locale]}</p>}
-				{profile.advisor && (
-					<div class="project-hero-actions">
-						<a class="button-link" href={profile.advisor.url} target="_blank" rel="noreferrer">
+				<div class="education-title-row">
+					<h1>{profile.institution[locale]}</h1>
+					<p class="education-title-meta">{profile.location[locale]} · {profile.period[locale]}</p>
+				</div>
+				<div class="education-degree-row">
+					<p class="education-degree-line">{profile.school[locale]} · {profile.degree[locale]}</p>
+					{profile.advisor && (
+						<a class="button-link education-advisor-button" href={profile.advisor.url} target="_blank" rel="noreferrer">
 							{profile.advisor.label[locale]}<span aria-hidden="true"> ↗</span><span class="sr-only">{labels.external}</span>
 						</a>
-					</div>
-				)}
+					)}
+				</div>
+				{profile.showSummary !== false && <p class="project-lead">{profile.summary[locale]}</p>}
 			</header>
 
 			<div class="education-sections">

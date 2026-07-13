@@ -144,7 +144,7 @@ export const homeContent = {
 		academicActivitiesTitle: '学术交流与活动',
 		academicActivities: [
 			{
-				period: '2026.08.11 – 08.20',
+				period: '2026.08.11 – 2026.08.20',
 				title: '“组合与图论”暑期课程',
 				city: '北京',
 				institution: '北京邮电大学',
@@ -152,7 +152,7 @@ export const homeContent = {
 				status: '计划参加',
 			},
 			{
-				period: '2023.03.10 – 03.11',
+				period: '2023.03.10 – 2023.03.11',
 				title: '2022 年深圳杯颁奖典礼与研讨会',
 				city: '深圳',
 				institution: '深圳北理莫斯科大学',
@@ -186,8 +186,8 @@ export const homeContent = {
 		newsTitle: '动态',
 		news: [
 			{ date: '2026.06', text: '投稿论文 “B-coloring of Cartesian Products of Paths and Cycles”。' },
-			{ date: '2025.09', text: '进入南开大学攻读应用数学硕士学位。' },
 			{ date: '2025.11', text: '获得“华为杯”研究生数学建模竞赛全国三等奖。' },
+			{ date: '2025.09', text: '进入南开大学攻读应用数学硕士学位。' },
 			{ date: '2025.05', text: '获中国海洋大学理学荣誉学士；本科毕业论文获评校级优秀本科毕业论文。' },
 			{ date: '2024.12', text: '校级科研训练项目《社交网络中“信息茧房”效应的机理研究》以“优秀”等次结项。' },
 		],
@@ -284,7 +284,7 @@ export const homeContent = {
 		academicActivitiesTitle: 'Academic Activities',
 		academicActivities: [
 			{
-				period: 'Aug. 11–20, 2026',
+				period: 'Aug. 11, 2026 – Aug. 20, 2026',
 				title: 'Summer Course on Combinatorics and Graph Theory',
 				city: 'Beijing',
 				institution: 'BUPT',
@@ -292,7 +292,7 @@ export const homeContent = {
 				status: 'Upcoming',
 			},
 			{
-				period: 'Mar. 10–11, 2023',
+				period: 'Mar. 10, 2023 – Mar. 11, 2023',
 				title: '2022 Shenzhen Cup Award Ceremony and Symposium',
 				city: 'Shenzhen',
 				institution: 'Shenzhen MSU-BIT University',
@@ -326,8 +326,8 @@ export const homeContent = {
 		newsTitle: 'News',
 		news: [
 			{ date: '2026.06', text: 'Submitted “B-coloring of Cartesian Products of Paths and Cycles.”' },
-			{ date: '2025.09', text: 'Began M.S. studies in Applied Mathematics at Nankai University.' },
 			{ date: '2025.11', text: 'Won a National Third Prize in the China Postgraduate Mathematical Contest in Modeling.' },
+			{ date: '2025.09', text: 'Began M.S. studies in Applied Mathematics at Nankai University.' },
 			{ date: '2025.05', text: 'Graduated from Ocean University of China with an Honorary B.S.; the undergraduate thesis was recognized as an Outstanding Undergraduate Thesis by the university.' },
 			{ date: '2024.12', text: 'The university-level research training project “Mechanisms of the Information Cocoon Effect in Social Networks” concluded with an Excellent rating.' },
 		],
