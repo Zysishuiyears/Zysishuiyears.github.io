@@ -1,0 +1,16 @@
+---
+import EducationPage from '../../components/EducationPage.astro';
+import { educationProfiles, type EducationProfile } from '../../data/education';
+
+export function getStaticPaths() {
+	return educationProfiles.map((profile) => ({ params: { slug: profile.slug }, props: { profile } }));
+}
+
+interface Props {
+	profile: EducationProfile;
+}
+
+const { profile } = Astro.props;
+---
+
+<EducationPage locale="zh" profile={profile} />
