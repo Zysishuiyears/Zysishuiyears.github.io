@@ -651,7 +651,7 @@ a {
 
 .resource-link-shell {
 	color: var(--text);
-	font-size: 0.76em;
+	font-size: 1em;
 	font-weight: 650;
 	white-space: nowrap;
 }

@@ -44,7 +44,6 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 									<strong class="education-degree">{entry.degree}</strong>
 									{entry.advisor && <><span class="education-separator" aria-hidden="true">·</span><a class="education-advisor" href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a></>}
 								</div>
-								<p>{entry.details}</p>
 							</div>
 						</article>
 					))}

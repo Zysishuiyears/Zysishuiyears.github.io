@@ -23,7 +23,7 @@ export interface EducationProfile {
 	period: Localized<string>;
 	location: Localized<string>;
 	summary: Localized<string>;
-	tags: Localized<readonly string[]>;
+	showSummary?: boolean;
 	advisor?: {
 		label: Localized<string>;
 		url: string;
@@ -43,10 +43,6 @@ export const educationProfiles = [
 			zh: '保研录取，研究方向为图论与组合优化，当前主要关注结构图论、图染色以及平面图与特殊图类上的 B-coloring 问题。',
 			en: 'Admitted through graduate recommendation, with a research focus on graph theory and combinatorial optimization, particularly structural graph theory, graph coloring, and B-coloring on planar and other special graph classes.',
 		},
-		tags: {
-			zh: ['图论与组合优化', '硕士研究生'],
-			en: ['Graph Theory and Combinatorial Optimization', 'M.S. student'],
-		},
 		advisor: {
 			label: { zh: '导师：李佳傲教授', en: 'Advisor: Prof. Jiaao Li' },
 			url: 'https://www.lijiaao-dm-nk.com/',
@@ -55,8 +51,8 @@ export const educationProfiles = [
 			{
 				title: { zh: '主修课程', en: 'Major coursework' },
 				items: {
-					zh: ['图论', '构造组合学', '深度学习', '泛函分析', '测度论与概率论基础'],
-					en: ['Graph Theory', 'Constructive Combinatorics', 'Deep Learning', 'Functional Analysis', 'Foundations of Measure Theory and Probability'],
+					zh: ['图论', '极值图论', '图同态与图极限', '深度学习', '泛函分析', '测度论与概率论基础', '构造组合学'],
+					en: ['Graph Theory', 'Extremal Graph Theory', 'Graph Homomorphisms and Graph Limits', 'Deep Learning', 'Functional Analysis', 'Foundations of Measure Theory and Probability', 'Constructive Combinatorics'],
 				},
 			},
 			{
@@ -101,11 +97,15 @@ export const educationProfiles = [
 			zh: '在数学与应用数学专业接受系统的数学理论、统计计算、算法与建模训练，获理学荣誉学士学位。',
 			en: 'Completed systematic training in mathematical theory, statistical computing, algorithms, and modeling in the Mathematics and Applied Mathematics program, earning an Honorary B.S. degree.',
 		},
-		tags: {
-			zh: ['专业排名前 3%', '理学荣誉学士'],
-			en: ['Top 3% in program', 'Honorary B.S.'],
-		},
+		showSummary: false,
 		sections: [
+			{
+				title: { zh: '学业表现', en: 'Academic performance' },
+				body: {
+					zh: 'GPA 3.77/4.00；综合排名 3/133。',
+					en: 'GPA: 3.77/4.00; overall rank: 3/133.',
+				},
+			},
 			{
 				title: { zh: '主修课程', en: 'Major coursework' },
 				items: {

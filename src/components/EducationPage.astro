@@ -36,10 +36,7 @@ const labels = locale === 'zh'
 				<p class="kicker">{profile.location[locale]} · {profile.period[locale]}</p>
 				<h1>{profile.institution[locale]}</h1>
 				<p class="education-degree-line">{profile.school[locale]} · {profile.degree[locale]}</p>
-				<p class="project-lead">{profile.summary[locale]}</p>
-				<ul class="tag-list" aria-label={locale === 'zh' ? '教育信息' : 'Education highlights'}>
-					{profile.tags[locale].map((tag) => <li>{tag}</li>)}
-				</ul>
+				{profile.showSummary !== false && <p class="project-lead">{profile.summary[locale]}</p>}
 				{profile.advisor && (
 					<div class="project-hero-actions">
 						<a class="button-link" href={profile.advisor.url} target="_blank" rel="noreferrer">

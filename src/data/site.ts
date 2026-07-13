@@ -68,11 +68,7 @@ export const homeContent = {
 		focusAreas: [
 			{
 				title: '结构图论与图染色',
-				description: 'B-coloring、平面图、笛卡尔积图、符号图与极值结构。',
-			},
-			{
-				title: '图算法与组合优化',
-				description: 'SAT/SMT、整数规划、NP-hard 问题启发式求解与计算图调度。',
+				description: 'B-coloring、平面图、笛卡尔积图与 SAT/SMT 约束求解。',
 			},
 			{
 				title: 'Graph Learning 与 Graph for LLM',
@@ -115,7 +111,6 @@ export const homeContent = {
 				degree: '应用数学硕士（图论与组合优化）',
 				period: '2025.09 – 2028.06（预计）',
 				advisor: { label: '导师：李佳傲教授', url: 'https://www.lijiaao-dm-nk.com/' },
-				details: '保研录取；研究方向为图论与组合优化。',
 			},
 			{
 				slug: 'ouc',
@@ -123,7 +118,6 @@ export const homeContent = {
 				degree: '理学荣誉学士',
 				period: '2021.09 – 2025.06',
 				advisor: undefined,
-				details: 'GPA 3.77/4.00（综合排名 3/133）。',
 			},
 		],
 		selectedWorkTitle: '其他竞赛经历',
@@ -193,7 +187,7 @@ export const homeContent = {
 		news: [
 			{ date: '2026.06', text: '投稿论文 “B-coloring of Cartesian Products of Paths and Cycles”。' },
 			{ date: '2025.09', text: '进入南开大学攻读应用数学硕士学位。' },
-			{ date: '2025.09', text: '获得“华为杯”研究生数学建模竞赛全国三等奖。' },
+			{ date: '2025.11', text: '获得“华为杯”研究生数学建模竞赛全国三等奖。' },
 			{ date: '2025.05', text: '获中国海洋大学理学荣誉学士；本科毕业论文获评校级优秀本科毕业论文。' },
 			{ date: '2024.12', text: '校级科研训练项目《社交网络中“信息茧房”效应的机理研究》以“优秀”等次结项。' },
 		],
@@ -214,11 +208,7 @@ export const homeContent = {
 		focusAreas: [
 			{
 				title: 'Structural graph theory and coloring',
-				description: 'B-coloring, planar graphs, Cartesian products, signed graphs, and extremal structure.',
-			},
-			{
-				title: 'Graph algorithms and combinatorial optimization',
-				description: 'SAT/SMT, integer programming, heuristics for NP-hard problems, and computational-graph scheduling.',
+				description: 'B-coloring, planar graphs, Cartesian products, and SAT/SMT-based constraint solving.',
 			},
 			{
 				title: 'Graph learning and graph-based methods for LLMs',
@@ -261,7 +251,6 @@ export const homeContent = {
 				degree: 'M.S. in Applied Mathematics',
 				period: 'Sep. 2025 – Jun. 2028 (expected)',
 				advisor: { label: 'Advisor: Prof. Jiaao Li', url: 'https://www.lijiaao-dm-nk.com/' },
-				details: 'Admitted through graduate recommendation; research focus: Graph Theory and Combinatorial Optimization.',
 			},
 			{
 				slug: 'ouc',
@@ -269,7 +258,6 @@ export const homeContent = {
 				degree: 'Honorary Bachelor of Science',
 				period: 'Sep. 2021 – Jun. 2025',
 				advisor: undefined,
-				details: 'GPA 3.77/4.00 (overall rank: 3/133).',
 			},
 		],
 		selectedWorkTitle: 'Other Competition Experience',
@@ -339,7 +327,7 @@ export const homeContent = {
 		news: [
 			{ date: '2026.06', text: 'Submitted “B-coloring of Cartesian Products of Paths and Cycles.”' },
 			{ date: '2025.09', text: 'Began M.S. studies in Applied Mathematics at Nankai University.' },
-			{ date: '2025.09', text: 'Won a National Third Prize in the China Postgraduate Mathematical Contest in Modeling.' },
+			{ date: '2025.11', text: 'Won a National Third Prize in the China Postgraduate Mathematical Contest in Modeling.' },
 			{ date: '2025.05', text: 'Graduated from Ocean University of China with an Honorary B.S.; the undergraduate thesis was recognized as an Outstanding Undergraduate Thesis by the university.' },
 			{ date: '2024.12', text: 'The university-level research training project “Mechanisms of the Information Cocoon Effect in Social Networks” concluded with an Excellent rating.' },
 		],
