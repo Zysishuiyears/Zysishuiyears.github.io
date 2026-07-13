@@ -37,9 +37,12 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 						<article class="timeline-entry" data-reveal>
 							<div class="timeline-period">{entry.period}</div>
 							<div>
-								<h3>{entry.institution}</h3>
-								<p class="timeline-degree">{entry.degree}</p>
-								{entry.advisor && <p class="timeline-advisor"><a href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a></p>}
+								<div class="education-headline">
+									<h3>{entry.institution}</h3>
+									<span class="education-separator" aria-hidden="true">·</span>
+									<strong class="education-degree">{entry.degree}</strong>
+									{entry.advisor && <><span class="education-separator" aria-hidden="true">·</span><a class="education-advisor" href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a></>}
+								</div>
 								<p>{entry.details}</p>
 							</div>
 						</article>
@@ -49,7 +52,6 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 
 			<section class="content-section" aria-labelledby="research-heading">
 				<SectionHeading id="research" title={content.focusTitle} icon="🔬" />
-				<p class="section-intro" data-reveal>{content.focusIntro}</p>
 				<ol class="focus-list">
 					{content.focusAreas.map((area, index) => (
 						<li data-reveal style={`--reveal-order: ${index}`}>
@@ -93,7 +95,7 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 				<div class="compact-entry-list">
 					{content.selectedWork.map((entry) => (
 						<article data-reveal>
-							<h3>{entry.title}</h3>
+							<h3><span>{entry.title}</span><span class="resource-links"><a class="resource-link" href={entry.paper} target="_blank" rel="noreferrer">[paper]</a></span></h3>
 							<p class="entry-meta">{entry.meta}</p>
 							<p>{entry.description}</p>
 						</article>
@@ -101,19 +103,18 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 				</div>
 			</section>
 
-			<section class="content-section split-section" aria-label={locale === 'zh' ? '荣誉与技能' : 'Honors and skills'}>
-				<div>
-					<SectionHeading id="honors" title={content.honorsTitle} icon="🏆" />
-					<ul class="simple-list">
-						{content.honors.map((honor) => <li data-reveal>{honor}</li>)}
-					</ul>
-				</div>
-				<div>
-					<SectionHeading id="skills" title={content.skillsTitle} icon="🛠️" />
-					<dl class="skills-list">
-						{content.skills.map((skill) => <div data-reveal><dt>{skill.label}</dt><dd>{skill.value}</dd></div>)}
-					</dl>
-				</div>
+			<section class="content-section" aria-labelledby="honors-heading">
+				<SectionHeading id="honors" title={content.honorsTitle} icon="🏆" />
+				<ul class="simple-list honors-list">
+					{content.honors.map((honor) => <li data-reveal>{honor}</li>)}
+				</ul>
+			</section>
+
+			<section class="content-section" aria-labelledby="skills-heading">
+				<SectionHeading id="skills" title={content.skillsTitle} icon="🛠️" />
+				<dl class="skills-list">
+					{content.skills.map((skill) => <div data-reveal><dt>{skill.label}</dt><dd>{skill.value}</dd></div>)}
+				</dl>
 			</section>
 
 			<section class="content-section" aria-labelledby="news-heading">
@@ -125,7 +126,6 @@ const canonicalPath = locale === 'zh' ? '/' : '/en/';
 
 			<section class="content-section contact-section" aria-labelledby="contact-heading" data-reveal>
 				<SectionHeading id="contact" title={content.contactTitle} icon="✉️" />
-				<p>{content.contactText}</p>
 				<div class="contact-links">
 					<a href={`mailto:${publicEmail}`}><span>{content.emailLabel}</span>{publicEmail}</a>
 					<a href={githubUrl} target="_blank" rel="noreferrer"><span>{content.githubLabel}</span>@Zysishuiyears</a>

@@ -6,6 +6,7 @@
 	--text-faint: #667085;
 	--accent: #6b2f5f;
 	--accent-soft: #f5edf3;
+	--resource-link: #7b4b73;
 	--graph: #2e7d74;
 	--graph-soft: #eaf4f2;
 	--border: #d9dee8;
@@ -145,21 +146,20 @@ a {
 	padding: 0 1.25rem;
 }
 
-.site-name {
-	display: inline-flex;
-	align-items: baseline;
-	min-width: 232px;
-	gap: 0.55rem;
-	color: var(--text);
-	font-weight: 700;
+.nav-home {
+	position: relative;
+	padding: 0.35rem 0;
+	color: var(--text-soft);
+	font-size: 0.9rem;
+	font-weight: 650;
 	text-decoration: none;
 }
 
-.site-name small {
-	color: var(--text-faint);
-	font-family: var(--serif);
-	font-size: 0.76rem;
-	font-weight: 400;
+.nav-home:hover {
+	color: var(--text);
+	text-decoration: underline;
+	text-decoration-color: var(--accent);
+	text-underline-offset: 0.28rem;
 }
 
 .desktop-nav {
@@ -511,12 +511,6 @@ a {
 	margin: 0;
 }
 
-.section-intro {
-	max-width: 74ch;
-	margin-bottom: 1.35rem;
-	color: var(--text-soft);
-}
-
 .focus-list {
 	margin: 0;
 	padding: 0;
@@ -583,17 +577,17 @@ a {
 	align-items: baseline;
 	gap: 0.45rem;
 	margin-bottom: 0.45rem;
-	font-family: var(--serif);
+	font-family: var(--sans);
 	font-size: 1.16rem;
-	font-weight: 700;
+	font-weight: 750;
 }
 
-.project-row h3 a {
+.project-title-link {
 	color: var(--text);
 	text-decoration: none;
 }
 
-.project-row h3 a:hover {
+.project-title-link:hover {
 	color: var(--accent);
 	text-decoration: underline;
 }
@@ -648,21 +642,15 @@ a {
 	line-height: 1.55;
 }
 
-.publication-entry h3,
-.timeline-entry h3 {
+.publication-entry h3 {
 	margin-bottom: 0.3rem;
 	font-size: 1rem;
-}
-
-.publication-entry h3 {
-	font-family: var(--serif);
-}
-
-.publication-entry h3 {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
 	gap: 0.5rem;
+	font-family: var(--sans);
+	font-weight: 750;
 }
 
 .resource-links {
@@ -673,15 +661,17 @@ a {
 }
 
 .resource-link {
-	color: var(--accent);
+	color: var(--resource-link);
 	font-size: 0.76em;
 	font-weight: 650;
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-thickness: 0.08em;
+	text-underline-offset: 0.18em;
 	white-space: nowrap;
 }
 
 .resource-link:hover {
-	text-decoration: underline;
+	color: var(--accent);
 }
 
 .publication-entry p,
@@ -690,15 +680,40 @@ a {
 	font-size: 0.9rem;
 }
 
-.publication-authors,
-.timeline-degree {
+.publication-authors {
 	color: var(--text);
-	font-weight: 620;
+	font-weight: 400;
 }
 
-.timeline-advisor a {
-	color: var(--accent);
+.education-headline {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.22rem 0.48rem;
+	margin-bottom: 0.35rem;
+}
+
+.education-headline h3 {
+	margin: 0;
+	font-family: var(--sans);
+	font-size: 1rem;
+	font-weight: 750;
+}
+
+.education-degree {
+	color: var(--text);
 	font-weight: 650;
+}
+
+.education-separator {
+	color: var(--text-faint);
+}
+
+.education-advisor {
+	color: var(--resource-link);
+	font-weight: 650;
+	text-decoration: underline;
+	text-underline-offset: 0.18em;
 }
 
 .publication-venue,
@@ -713,8 +728,14 @@ a {
 }
 
 .compact-entry-list h3 {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.45rem;
 	margin-bottom: 0.2rem;
+	font-family: var(--sans);
 	font-size: 0.96rem;
+	font-weight: 750;
 }
 
 .compact-entry-list p {
@@ -726,12 +747,6 @@ a {
 .compact-entry-list .entry-meta {
 	color: var(--graph);
 	font-size: 0.78rem;
-}
-
-.split-section {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 2.4rem;
 }
 
 .simple-list {
@@ -810,15 +825,11 @@ a {
 	margin-bottom: 0.8rem;
 }
 
-.contact-section > p {
-	color: var(--text-soft);
-}
-
 .contact-links {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.75rem 1.6rem;
-	margin-top: 1rem;
+	margin-top: 0.2rem;
 }
 
 .contact-links a {
@@ -1047,10 +1058,6 @@ a {
 		margin-left: auto;
 	}
 
-	.site-name {
-		min-width: 0;
-	}
-
 	.site-shell {
 		grid-template-columns: 1fr;
 		gap: 2rem;
@@ -1101,10 +1108,6 @@ a {
 	.site-shell {
 		padding-right: 1rem;
 		padding-left: 1rem;
-	}
-
-	.site-name small {
-		display: none;
 	}
 
 	.profile-sidebar {
@@ -1158,7 +1161,6 @@ a {
 		gap: 0.3rem;
 	}
 
-	.split-section,
 	.project-narrative {
 		grid-template-columns: 1fr;
 	}

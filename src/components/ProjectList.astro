@@ -18,7 +18,7 @@ const projectBase = locale === 'zh' ? '/projects' : '/en/projects';
 			<div class="project-body">
 				<p class="project-date"><time datetime={project.data.date.toISOString()}>{project.data.date.getFullYear()}</time></p>
 				<h3>
-					<a href={`${projectBase}/${project.data.slug}/`}>{project.data.title[locale]}</a>
+					<a class="project-title-link" href={`${projectBase}/${project.data.slug}/`}>{project.data.title[locale]}</a>
 					<span class="resource-links">
 						{project.data.links.paper && <a class="resource-link" href={project.data.links.paper} target="_blank" rel="noreferrer">[paper]</a>}
 						{project.data.links.repo && <a class="resource-link" href={project.data.links.repo} target="_blank" rel="noreferrer">[code]</a>}
