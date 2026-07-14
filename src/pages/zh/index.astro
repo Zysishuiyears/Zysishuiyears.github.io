@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import HomePage from '../components/HomePage.astro';
+import HomePage from '../../components/HomePage.astro';
 
 const projects = (await getCollection('projects')).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
 
-<HomePage locale="en" projects={projects} />
+<HomePage locale="zh" projects={projects} />

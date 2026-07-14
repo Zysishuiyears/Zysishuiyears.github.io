@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { locale, switchHref, isHome = false } = Astro.props;
-const homeHref = locale === 'zh' ? '/' : '/en/';
+const homeHref = locale === 'zh' ? '/zh/' : '/';
 const label = localeMeta[locale];
 const menuLabel = locale === 'zh' ? '导航菜单' : 'Navigation menu';
 const items = navItems[locale];

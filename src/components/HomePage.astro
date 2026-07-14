@@ -15,9 +15,9 @@ interface Props {
 
 const { locale, projects } = Astro.props;
 const content = homeContent[locale];
-const switchHref = locale === 'zh' ? '/en/' : '/';
-const canonicalPath = locale === 'zh' ? '/' : '/en/';
-const educationBase = locale === 'zh' ? '/education' : '/en/education';
+const switchHref = locale === 'zh' ? '/' : '/zh/';
+const canonicalPath = locale === 'zh' ? '/zh/' : '/';
+const educationBase = locale === 'zh' ? '/zh/education' : '/education';
 ---
 
 <BaseLayout locale={locale} canonicalPath={canonicalPath} alternatePath={switchHref}>

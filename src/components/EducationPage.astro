@@ -12,10 +12,10 @@ interface Props {
 }
 
 const { locale, profile } = Astro.props;
-const homeHref = locale === 'zh' ? '/' : '/en/';
-const educationBase = locale === 'zh' ? '/education' : '/en/education';
+const homeHref = locale === 'zh' ? '/zh/' : '/';
+const educationBase = locale === 'zh' ? '/zh/education' : '/education';
 const canonicalPath = `${educationBase}/${profile.slug}/`;
-const alternatePath = locale === 'zh' ? `/en/education/${profile.slug}/` : `/education/${profile.slug}/`;
+const alternatePath = locale === 'zh' ? `/education/${profile.slug}/` : `/zh/education/${profile.slug}/`;
 const labels = locale === 'zh'
 	? { back: '返回教育经历' }
 	: { back: 'Back to education' };
