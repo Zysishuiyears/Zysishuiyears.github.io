@@ -16,7 +16,7 @@ method:
   en: The model builds a weighted directed network from node influence, edge weights, and interest thresholds; SEIR dynamics and impulse functions describe diffusion scale and anomalous amplification, while LeaderRank and k-core identify influential nodes and structural intervention points. The information-cocoon extension introduces opinion values, edge-weight feedback, and an error-backpropagation-inspired update rule to model the chain of information reception, processing, and transmission.
 results:
   zh: 形成论文《尖叫效应传播机制及仿真研究》；校级本科生研究发展计划《社交网络中“信息茧房”效应的机理研究》以“优秀”等次结项。相关研究受到“2023 年全国大学生数学建模竞赛赛后研究项目”支持。
-  en: The work produced the paper “Propagation Mechanism and Simulation Study of the Scream Effect”; the university Undergraduate Research Development Program project “Mechanisms of the Information Cocoon Effect in Social Networks” concluded with an Excellent rating. The research was supported by the 2023 China Undergraduate Mathematical Contest in Modeling Post-Competition Research Program.
+  en: The work produced the paper “Research of the propagation mechanism of scream effect and its simulation (in Chinese)”; the university Undergraduate Research Development Program project “Mechanisms of the Information Cocoon Effect in Social Networks” concluded with an Excellent rating. The research was supported by the 2023 China Undergraduate Mathematical Contest in Modeling Post-Competition Research Program.
 role:
   zh: 担任项目负责人，负责两阶段研究中的网络建模、传播与反馈机制设计、仿真实验、结构分析和论文写作。
   en: Served as project lead across both stages, responsible for network modeling, diffusion and feedback mechanisms, simulation, structural analysis, and manuscript preparation.
@@ -53,5 +53,4 @@ tags:
   - k-core
 links:
   repo: https://github.com/Zysishuiyears/scream-effect-propagation-simulation
-  paper: /papers/scream-effect-propagation-simulation.pdf
 ---
