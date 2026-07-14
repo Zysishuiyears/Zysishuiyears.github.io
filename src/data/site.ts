@@ -178,7 +178,7 @@ export const homeContent = {
 		skills: [
 			{ label: '算法、优化与机器学习', value: '图算法、SAT/SMT、IP/MILP、NP-hard 问题启发式算法、计算图调度；神经网络、CNN/RNN/LSTM、GNN、Transformer、HMM；PyTorch、TensorFlow' },
 			{ label: '英语能力', value: 'CET-6 517；具备良好的学术英语阅读、写作与展示能力，可制作英文学术海报' },
-			{ label: '工具', value: 'Git/GitHub、Linux、LaTeX、Codex 等 AI 工具的高效应用' },
+			{ label: '工具', value: 'SSH、Git/GitHub、Linux、LaTeX、Codex 等 AI 工具的高效应用' },
 		],
 		newsTitle: '动态',
 		news: [
@@ -312,7 +312,7 @@ export const homeContent = {
 		skills: [
 			{ label: 'Algorithms, optimization, and machine learning', value: 'Graph algorithms, SAT/SMT, IP/MILP, NP-hard heuristics, and computational-graph scheduling; neural networks, CNN/RNN/LSTM, GNNs, Transformers, and HMMs; PyTorch and TensorFlow' },
 			{ label: 'English', value: 'CET-6: 517; strong academic English for reading, writing, and presentation, including English academic posters' },
-			{ label: 'Tools', value: 'Git/GitHub, Linux, LaTeX, and effective use of Codex and other AI tools' },
+			{ label: 'Tools', value: 'SSH, Git/GitHub, Linux, LaTeX, and effective use of Codex and other AI tools' },
 		],
 		newsTitle: 'News',
 		news: [
