@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { homeContent, type Locale } from '../data/site';
+import type { Locale } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from './Header.astro';
 import ProfileSidebar from './ProfileSidebar.astro';
@@ -16,8 +16,6 @@ const homeHref = locale === 'zh' ? '/' : '/en/';
 const projectBase = locale === 'zh' ? '/projects' : '/en/projects';
 const canonicalPath = `${projectBase}/${data.slug}/`;
 const alternatePath = locale === 'zh' ? `/en/projects/${data.slug}/` : `/projects/${data.slug}/`;
-const content = homeContent[locale];
-
 const labels = locale === 'zh'
 	? {
 		back: '返回主页', problem: '问题背景', method: '数学与算法方法', role: '个人贡献', result: '结果与产出', workflow: '方法流程', technology: '技术与方法', repo: '查看代码仓库', paper: '查看论文', external: '在新窗口打开',
@@ -70,7 +68,6 @@ const labels = locale === 'zh'
 
 			<footer class="project-footer">
 				<a class="back-link" href={`${homeHref}#projects`}><span aria-hidden="true">←</span> {labels.back}</a>
-				<p>{content.profileRole}</p>
 			</footer>
 		</article>
 	</main>

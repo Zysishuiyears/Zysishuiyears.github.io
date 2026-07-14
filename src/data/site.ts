@@ -13,7 +13,7 @@ export const localeMeta = {
 		englishName: 'Zhengxu Jiang',
 		title: '姜政旭 | 图论、组合优化与图算法',
 		description:
-			'南开大学应用数学硕士研究生，研究结构图论、图染色、组合优化与图算法，并关注图学习及 AI for Combinatorial Optimization。',
+			'南开大学应用数学硕士研究生，研究结构图论、图染色与组合优化，当前关注平面图及特殊图类上的 B-coloring 问题。',
 	},
 	en: {
 		label: 'English',
@@ -56,13 +56,14 @@ export const navItems = {
 
 export const homeContent = {
 	zh: {
-		profileRole: '南开大学 · 应用数学硕士生',
-		profileBio: '图论与组合优化背景，关注图算法、Graph Learning 与 AI for CO。',
+		profileBio: '结构图论与图染色，当前关注 B-coloring。',
+		profileLocation: '天津，中国',
+		profileInstitution: '南开大学',
 		availability: '欢迎科研合作与算法实习交流',
 		aboutTitle: '关于我',
 		intro: [
-			'我是姜政旭，南开大学数学科学学院应用数学硕士研究生，研究方向为结构图论、图染色与组合优化。当前主要关注平面图及特殊图类上的 B-coloring 问题。',
-			'我希望进一步将结构图论方法拓展到图学习、面向大模型的图方法与大规模图计算，探索图结构信息在图表示学习、图记忆、图语言模型和图增强智能体中的建模与利用。',
+			'我是姜政旭，现为南开大学数学科学学院应用数学硕士研究生，导师为李佳傲教授。',
+			'我的研究主要围绕结构图论、图染色与组合优化展开，当前关注平面图及特殊图类上的 B-coloring 问题，并结合 SAT 求解开展结构分析与小规模验证。此前，我参与过社交网络信息传播建模与面向 NPU 的计算图调度研究。欢迎围绕图论、图算法与组合优化开展交流。',
 		],
 		focusTitle: '研究兴趣',
 		focusAreas: [
@@ -177,7 +178,8 @@ export const homeContent = {
 			{ label: '编程语言', value: 'Python、C/C++、Bash/Shell' },
 			{ label: '算法与优化', value: '图算法、SAT/SMT、IP/MILP、NP-hard 问题启发式算法、计算图调度' },
 			{ label: '机器学习', value: '神经网络、CNN/RNN/LSTM、GNN、Transformer、HMM；PyTorch、TensorFlow' },
-			{ label: '工具', value: 'Git/GitHub、Linux、LaTeX、Codex 与 LLM 辅助开发' },
+			{ label: '英语能力', value: 'CET-6 517；具备良好的学术英语阅读、写作与展示能力，可制作英文学术海报' },
+			{ label: '工具', value: 'Git/GitHub、Linux、LaTeX、Codex 等 AI 工具的高效应用' },
 		],
 		newsTitle: '动态',
 		news: [
@@ -185,20 +187,21 @@ export const homeContent = {
 			{ date: '2025.11', text: '获得“华为杯”研究生数学建模竞赛全国三等奖。' },
 			{ date: '2025.09', text: '进入南开大学攻读应用数学硕士学位。' },
 			{ date: '2025.05', text: '获中国海洋大学理学荣誉学士；本科毕业论文获评校级优秀本科毕业论文。' },
-			{ date: '2024.12', text: '校级科研训练项目《社交网络中“信息茧房”效应的机理研究》以“优秀”等次结项。' },
+			{ date: '2024.12', text: '校级本科生研究发展计划《社交网络中“信息茧房”效应的机理研究》以“优秀”等次结项。' },
 		],
 		contactTitle: '联系',
 		emailLabel: '电子邮箱',
 		githubLabel: 'GitHub',
 	},
 	en: {
-		profileRole: 'M.S. Student in Applied Mathematics @ Nankai',
-		profileBio: 'Graph theory and combinatorial optimization, with interests in graph algorithms, graph learning, and AI for combinatorial optimization.',
+		profileBio: 'Structural graph theory and graph coloring, with a current focus on B-coloring.',
+		profileLocation: 'Tianjin, China',
+		profileInstitution: 'Nankai University',
 		availability: 'Open to research collaboration and algorithm internships',
 		aboutTitle: 'About Me',
 		intro: [
-			'I am Zhengxu Jiang, an M.S. student in Applied Mathematics at the School of Mathematical Sciences, Nankai University. I work on structural graph theory, graph coloring, and combinatorial optimization, with a current focus on B-coloring problems on planar graphs and other special graph classes.',
-			'I am also interested in extending structural graph methods to graph learning, graph-based methods for LLMs, and large-scale graph computing, particularly graph representation learning, graph memory, graph language models, and graph-augmented agents.',
+			'I am Zhengxu Jiang, an M.S. student in Applied Mathematics at the School of Mathematical Sciences, Nankai University, advised by Prof. Jiaao Li.',
+			'My research focuses on structural graph theory, graph coloring, and combinatorial optimization. I am currently studying B-coloring problems on planar and other special graph classes, with SAT-assisted structural analysis and small-instance verification. I have also worked on social-network diffusion modeling and cache-aware compute-graph scheduling for NPUs. I welcome discussions and collaboration on graph theory, graph algorithms, and combinatorial optimization.',
 		],
 		focusTitle: 'Research Interests',
 		focusAreas: [
@@ -313,7 +316,8 @@ export const homeContent = {
 			{ label: 'Programming languages', value: 'Python, C/C++, Bash/Shell' },
 			{ label: 'Algorithms and optimization', value: 'Graph algorithms, SAT/SMT, IP/MILP, NP-hard heuristics, computational-graph scheduling' },
 			{ label: 'Machine learning', value: 'Neural networks, CNN/RNN/LSTM, GNNs, Transformers, HMMs; PyTorch and TensorFlow' },
-			{ label: 'Tools', value: 'Git/GitHub, Linux, LaTeX, Codex and LLM-assisted development' },
+			{ label: 'English', value: 'CET-6: 517; strong academic English for reading, writing, and presentation, including English academic posters' },
+			{ label: 'Tools', value: 'Git/GitHub, Linux, LaTeX, and effective use of Codex and other AI tools' },
 		],
 		newsTitle: 'News',
 		news: [
@@ -321,7 +325,7 @@ export const homeContent = {
 			{ date: '2025.11', text: 'Won a National Third Prize in the China Postgraduate Mathematical Contest in Modeling.' },
 			{ date: '2025.09', text: 'Began M.S. studies in Applied Mathematics at Nankai University.' },
 			{ date: '2025.05', text: 'Graduated from Ocean University of China with an Honorary B.S.; the undergraduate thesis was recognized as an Outstanding Undergraduate Thesis by the university.' },
-			{ date: '2024.12', text: 'The university-level research training project “Mechanisms of the Information Cocoon Effect in Social Networks” concluded with an Excellent rating.' },
+			{ date: '2024.12', text: 'The university Undergraduate Research Development Program project “Mechanisms of the Information Cocoon Effect in Social Networks” concluded with an Excellent rating.' },
 		],
 		contactTitle: 'Contact',
 		emailLabel: 'Email',

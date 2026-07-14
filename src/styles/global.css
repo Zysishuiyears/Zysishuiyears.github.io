@@ -330,23 +330,32 @@ a {
 }
 
 .profile-copy h1 {
-	margin: 0.85rem 0 0;
+	margin: 0;
 	font-size: 1.36rem;
 	font-weight: 720;
 }
 
+.profile-name-row {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: baseline;
+	gap: 0.4rem;
+	margin: 0.85rem 0 0.7rem;
+}
+
+.profile-name-row > * {
+	white-space: nowrap;
+}
+
+html[lang='en'] .profile-copy h1 {
+	font-size: 1.18rem;
+}
+
 .profile-english-name {
-	margin: 0.08rem 0 0.7rem;
+	margin: 0;
 	color: var(--text-faint);
 	font-family: var(--serif);
 	font-size: 0.84rem;
-}
-
-.profile-role {
-	margin-bottom: 0.65rem;
-	color: var(--text);
-	font-weight: 650;
-	line-height: 1.5;
 }
 
 .profile-bio {
@@ -382,7 +391,8 @@ a {
 	margin-top: 1rem;
 }
 
-.profile-links a {
+.profile-links a,
+.profile-link-item {
 	display: flex;
 	align-items: center;
 	gap: 0.55rem;
@@ -405,7 +415,7 @@ a {
 	stroke-width: 1.7;
 }
 
-.profile-links li:nth-child(2) svg {
+.profile-github-link svg {
 	fill: currentColor;
 	stroke: none;
 }
@@ -712,18 +722,35 @@ a {
 
 .education-entry-link {
 	display: inline-flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	gap: 0.22rem 0.48rem;
+	align-items: center;
+	gap: 0.75rem;
 	color: inherit;
 	text-decoration: none;
 }
 
 .education-entry-link:hover {
 	color: var(--accent);
+	text-decoration: none;
+}
+
+.education-entry-link:hover .education-entry-copy {
 	text-decoration: underline;
 	text-decoration-thickness: 0.08em;
 	text-underline-offset: 0.18em;
+}
+
+.education-logo {
+	flex: 0 0 auto;
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
+}
+
+.education-entry-copy {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.22rem 0.48rem;
 }
 
 .activity-headline {
@@ -1079,7 +1106,7 @@ abbr.activity-detail {
 	max-width: 24ch;
 }
 
-.education-title-row,
+.education-title-copy,
 .education-degree-row {
 	display: flex;
 	flex-wrap: wrap;
@@ -1087,12 +1114,26 @@ abbr.activity-detail {
 }
 
 .education-title-row {
-	gap: 0.4rem 1.2rem;
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
 	margin-bottom: 0.8rem;
 }
 
-.education-title-row h1 {
+.education-title-copy {
+	min-width: 0;
+	gap: 0.4rem 1.2rem;
+}
+
+.education-title-copy h1 {
 	margin: 0;
+}
+
+.education-hero-logo {
+	flex: 0 0 auto;
+	width: 64px;
+	height: 64px;
+	object-fit: contain;
 }
 
 .education-title-meta {
@@ -1285,6 +1326,10 @@ abbr.activity-detail {
 	}
 
 	.profile-copy h1 {
+		margin: 0;
+	}
+
+	.profile-name-row {
 		margin-top: 0;
 	}
 
@@ -1330,8 +1375,7 @@ abbr.activity-detail {
 		font-size: 1.18rem;
 	}
 
-	.profile-english-name,
-	.profile-role {
+	.profile-name-row {
 		margin-bottom: 0.35rem;
 	}
 
@@ -1385,6 +1429,16 @@ abbr.activity-detail {
 	.education-section {
 		grid-template-columns: 1fr;
 		gap: 0.55rem;
+	}
+
+	.education-logo {
+		width: 40px;
+		height: 40px;
+	}
+
+	.education-hero-logo {
+		width: 52px;
+		height: 52px;
 	}
 
 	.news-list li {

@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+import { educationLogos } from '../data/education-branding';
 import { githubUrl, homeContent, publicEmail, type Locale } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from './Header.astro';
@@ -41,9 +43,12 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 								<div class="education-headline">
 									<h3>
 										<a class="education-entry-link" href={`${educationBase}/${entry.slug}/`}>
-											<span>{entry.institution}</span>
-											<span class="education-separator" aria-hidden="true">·</span>
-											<span class="education-degree">{entry.degree}</span>
+											<Image class="education-logo" src={educationLogos[entry.slug]} width={48} height={48} alt="" loading="lazy" />
+											<span class="education-entry-copy">
+												<span>{entry.institution}</span>
+												<span class="education-separator" aria-hidden="true">·</span>
+												<span class="education-degree">{entry.degree}</span>
+											</span>
 										</a>
 									</h3>
 									{entry.advisor && <><span class="education-separator" aria-hidden="true">·</span><a class="education-advisor" href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a></>}

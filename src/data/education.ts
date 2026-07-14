@@ -1,4 +1,5 @@
 import type { Locale } from './site';
+import type { EducationSlug } from './education-branding';
 
 type Localized<T> = Record<Locale, T>;
 
@@ -16,7 +17,7 @@ export interface EducationSection {
 }
 
 export interface EducationProfile {
-	slug: string;
+	slug: EducationSlug;
 	institution: Localized<string>;
 	school: Localized<string>;
 	degree: Localized<string>;

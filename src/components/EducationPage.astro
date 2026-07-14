@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import { educationLogos } from '../data/education-branding';
 import type { EducationProfile } from '../data/education';
 import type { Locale } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -34,8 +36,11 @@ const labels = locale === 'zh'
 			<a class="back-link" href={`${homeHref}#experience`}><span aria-hidden="true">←</span> {labels.back}</a>
 			<header class="project-hero education-hero">
 				<div class="education-title-row">
-					<h1>{profile.institution[locale]}</h1>
-					<p class="education-title-meta">{profile.location[locale]} · {profile.period[locale]}</p>
+					<Image class="education-hero-logo" src={educationLogos[profile.slug]} width={64} height={64} alt="" loading="eager" />
+					<div class="education-title-copy">
+						<h1>{profile.institution[locale]}</h1>
+						<p class="education-title-meta">{profile.location[locale]} · {profile.period[locale]}</p>
+					</div>
 				</div>
 				<div class="education-degree-row">
 					<p class="education-degree-line">{profile.school[locale]} · {profile.degree[locale]}</p>
