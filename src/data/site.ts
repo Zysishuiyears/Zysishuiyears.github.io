@@ -71,7 +71,7 @@ export const homeContent = {
 		focusTitle: '研究兴趣',
 		focusAreas: [
 			{
-				title: '结构图论与带约束的图染色',
+				title: '结构图论与组合优化',
 				description: '关注与圈结构、符号图等附加条件相关的染色问题，以及相应图类的结构性质。',
 			},
 			{
@@ -208,7 +208,7 @@ export const homeContent = {
 		focusTitle: 'Research Interests',
 		focusAreas: [
 			{
-				title: 'Structural graph theory and constrained coloring',
+				title: 'Structural Graph Theory and Combinatorial Optimization',
 				description: 'Coloring problems with additional conditions involving cycle structures, signed graphs, and the structural properties of related graph classes.',
 			},
 			{
