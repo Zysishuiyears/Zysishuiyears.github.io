@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import { educationLogos } from '../data/education-branding';
 import { githubUrl, homeContent, publicEmail, type Locale } from '../data/site';
@@ -40,10 +39,10 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 						<article class="timeline-entry" data-reveal>
 							<div class="timeline-period">{entry.period}</div>
 							<div>
-								<div class="education-headline">
+								<div class:list={['education-headline', { 'education-headline--with-advisor': entry.advisor }]}>
 									<h3>
 										<a class="education-entry-link" href={`${educationBase}/${entry.slug}/`}>
-											<Image class="education-logo" src={educationLogos[entry.slug]} width={48} height={48} alt="" loading="lazy" />
+											<img class="education-logo" src={educationLogos[entry.slug].src} width="48" height="48" alt="" loading="lazy" decoding="async" />
 											<span class="education-entry-copy">
 												<span>{entry.institution}</span>
 												<span class="education-separator" aria-hidden="true">·</span>
@@ -51,7 +50,12 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 											</span>
 										</a>
 									</h3>
-									{entry.advisor && <><span class="education-separator" aria-hidden="true">·</span><a class="education-advisor" href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a></>}
+									{entry.advisor && (
+										<span class="education-advisor-group">
+											<span class="education-separator" aria-hidden="true">·</span>
+											<a class="education-advisor" href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a>
+										</span>
+									)}
 								</div>
 							</div>
 						</article>

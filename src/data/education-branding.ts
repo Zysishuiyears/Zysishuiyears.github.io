@@ -1,5 +1,5 @@
-import nankaiLogo from '../assets/education/nankai-logo.png';
-import oucLogo from '../assets/education/ouc-logo.png';
+import nankaiLogo from '../assets/education/nankai-logo.svg';
+import oucLogo from '../assets/education/ouc-logo.svg';
 
 export const educationLogos = {
 	nankai: nankaiLogo,

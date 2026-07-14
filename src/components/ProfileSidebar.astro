@@ -1,7 +1,7 @@
 ---
 import { Picture } from 'astro:assets';
 import profilePhoto from '../assets/jiang-zhengxu.jpg';
-import { githubUrl, homeContent, localeMeta, publicEmail, type Locale } from '../data/site';
+import { githubUrl, homeContent, localeMeta, nankaiSmsUrl, publicEmail, type Locale } from '../data/site';
 import GraphMotif from './GraphMotif.astro';
 
 interface Props {
@@ -37,9 +37,11 @@ const meta = localeMeta[locale];
 				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z" /><circle cx="12" cy="9" r="2.2" /></svg>
 				<span>{content.profileLocation}</span>
 			</li>
-			<li class="profile-link-item">
-				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5M5 10v8m4-8v8m6-8v8m4-8v8M3 20h18" /></svg>
-				<span>{content.profileInstitution}</span>
+			<li>
+				<a class="profile-institution-link" href={nankaiSmsUrl} target="_blank" rel="noreferrer">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5M5 10v8m4-8v8m6-8v8m4-8v8M3 20h18" /></svg>
+					<span>{content.profileInstitution}</span>
+				</a>
 			</li>
 			<li>
 				<a href={`mailto:${publicEmail}`}>

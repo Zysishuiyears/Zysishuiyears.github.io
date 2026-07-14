@@ -5,8 +5,8 @@ title:
   zh: 社交网络中“信息茧房”效应的机理研究
   en: Mechanisms of the Information Cocoon Effect in Social Networks
 summary:
-  zh: 融合论文《尖叫效应传播机制及仿真研究》与校级本科生研究发展计划《社交网络中“信息茧房”效应的机理研究》，以加权有向网络统一描述信息接收、加工、传播与意见反馈，分析异常放大、关键节点和信息茧房的形成及干预。相关研究受到“2023 年全国大学生数学建模竞赛赛后研究项目”支持。
-  en: Integrates the paper “Propagation Mechanism and Simulation Study of the Scream Effect” with the university Undergraduate Research Development Program project “Mechanisms of the Information Cocoon Effect in Social Networks.” A weighted directed-network framework models information reception, processing, diffusion, and opinion feedback to study anomalous amplification, key nodes, echo-chamber formation, and intervention. The work was supported by the 2023 China Undergraduate Mathematical Contest in Modeling Post-Competition Research Program.
+  zh: 以加权有向网络描述信息接收、加工、传播与意见反馈，结合传播动力学与网络结构分析，研究信息异常放大、关键节点识别以及信息茧房的形成与干预。
+  en: Uses a weighted directed network to model information reception, processing, diffusion, and opinion feedback, combining diffusion dynamics with structural analysis to study anomalous amplification, key-node identification, and the formation and intervention of information cocoons.
 problem:
   zh: 社交平台中的节点影响力、兴趣偏好、推荐反馈和群体结构会共同改变传播路径：局部信息可能被异常放大并形成“尖叫效应”，持续的意见强化又会推动信息茧房形成。因此需要在统一框架中同时刻画传播动力学、网络结构和意见反馈。
   en: >-

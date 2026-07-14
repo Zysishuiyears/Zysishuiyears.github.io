@@ -3,6 +3,7 @@ export type Locale = 'zh' | 'en';
 export const siteUrl = 'https://zysishuiyears.github.io';
 export const publicEmail = 'jiangzhengxuoucstu@163.com';
 export const githubUrl = 'https://github.com/Zysishuiyears';
+export const nankaiSmsUrl = 'https://sms.nankai.edu.cn/';
 
 export const localeMeta = {
 	zh: {
@@ -13,7 +14,7 @@ export const localeMeta = {
 		englishName: 'Zhengxu Jiang',
 		title: '姜政旭 | 图论、组合优化与图算法',
 		description:
-			'南开大学应用数学硕士研究生，研究结构图论、图染色与组合优化，当前关注平面图及特殊图类上的 B-coloring 问题。',
+			'南开大学应用数学硕士研究生，研究结构图论、带约束的图染色与组合优化，并关注复杂网络建模及应用。',
 	},
 	en: {
 		label: 'English',
@@ -56,24 +57,24 @@ export const navItems = {
 
 export const homeContent = {
 	zh: {
-		profileBio: '结构图论与图染色，当前关注 B-coloring。',
+		profileBio: '结构图论、带约束的图染色与组合优化。',
 		profileLocation: '天津，中国',
-		profileInstitution: '南开大学',
+		profileInstitution: '南开大学数学科学学院',
 		availability: '欢迎科研合作与算法实习交流',
 		aboutTitle: '关于我',
 		intro: [
 			'我是姜政旭，现为南开大学数学科学学院应用数学硕士研究生，导师为李佳傲教授。',
-			'我的研究主要围绕结构图论、图染色与组合优化展开，当前关注平面图及特殊图类上的 B-coloring 问题，并结合 SAT 求解开展结构分析与小规模验证。此前，我参与过社交网络信息传播建模与面向 NPU 的计算图调度研究。欢迎围绕图论、图算法与组合优化开展交流。',
+			'我的研究主要围绕结构图论、图染色与组合优化展开，当前关注带有额外约束的特殊染色问题，例如涉及圈结构、符号图等条件的染色，以及相应图类的结构性质。我也对复杂网络建模及其应用方向感兴趣，欢迎围绕图论、图算法与组合优化开展交流。',
 		],
 		focusTitle: '研究兴趣',
 		focusAreas: [
 			{
-				title: '结构图论与图染色',
-				description: 'B-coloring、平面图、笛卡尔积图与 SAT/SMT 约束求解。',
+				title: '结构图论与带约束的图染色',
+				description: '关注与圈结构、符号图等附加条件相关的染色问题，以及相应图类的结构性质。',
 			},
 			{
-				title: 'Graph Learning 与 Graph for LLM',
-				description: '图表示学习、图记忆、图语言模型与图增强智能体。',
+				title: '复杂网络与图学习应用',
+				description: '对信息传播、网络结构分析与图表示学习等应用方向感兴趣。',
 			},
 		],
 		projectsTitle: '项目',
@@ -194,24 +195,24 @@ export const homeContent = {
 		githubLabel: 'GitHub',
 	},
 	en: {
-		profileBio: 'Structural graph theory and graph coloring, with a current focus on B-coloring.',
+		profileBio: 'Structural graph theory, constrained graph coloring, and combinatorial optimization.',
 		profileLocation: 'Tianjin, China',
-		profileInstitution: 'Nankai University',
+		profileInstitution: 'School of Mathematical Sciences, Nankai University',
 		availability: 'Open to research collaboration and algorithm internships',
 		aboutTitle: 'About Me',
 		intro: [
 			'I am Zhengxu Jiang, an M.S. student in Applied Mathematics at the School of Mathematical Sciences, Nankai University, advised by Prof. Jiaao Li.',
-			'My research focuses on structural graph theory, graph coloring, and combinatorial optimization. I am currently studying B-coloring problems on planar and other special graph classes, with SAT-assisted structural analysis and small-instance verification. I have also worked on social-network diffusion modeling and cache-aware compute-graph scheduling for NPUs. I welcome discussions and collaboration on graph theory, graph algorithms, and combinatorial optimization.',
+			'My research focuses on structural graph theory, graph coloring, and combinatorial optimization. I am particularly interested in coloring problems with additional constraints, including those arising from cycle structures, signed graphs, and related graph classes. I am also interested in the modeling and applications of complex networks, and welcome discussions on graph theory, graph algorithms, and combinatorial optimization.',
 		],
 		focusTitle: 'Research Interests',
 		focusAreas: [
 			{
-				title: 'Structural graph theory and coloring',
-				description: 'B-coloring, planar graphs, Cartesian products, and SAT/SMT-based constraint solving.',
+				title: 'Structural graph theory and constrained coloring',
+				description: 'Coloring problems with additional conditions involving cycle structures, signed graphs, and the structural properties of related graph classes.',
 			},
 			{
-				title: 'Graph learning and graph-based methods for LLMs',
-				description: 'Graph representation learning, graph memory, graph language models, and graph-augmented agents.',
+				title: 'Complex networks and graph-learning applications',
+				description: 'Interests in information diffusion, network-structure analysis, graph representation learning, and related applications.',
 			},
 		],
 		projectsTitle: 'Projects',

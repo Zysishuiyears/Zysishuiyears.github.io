@@ -5,8 +5,8 @@ title:
   zh: 面向 NPU 的缓存感知 DAG 调度与流水优化
   en: Cache-aware DAG Scheduling for NPUs
 summary:
-  zh: 将 SIMD/NPU 算子依赖建模为有向无环计算图，在缓存受限条件下联合优化拓扑调度、数据驻留与流水压缩；结合 WCB 评分、连续缓存分配和 SPILL 机制，减少可避免的执行空隙与数据搬运。
-  en: Models SIMD/NPU operator dependencies as a directed acyclic graph and jointly optimizes topological scheduling, data residency, and pipeline compression under limited on-chip cache, combining WCB-style scoring, contiguous allocation, and spill handling to reduce avoidable execution slack and data movement.
+  zh: 将 SIMD/NPU 算子依赖建模为有向无环计算图，在缓存受限条件下联合研究拓扑调度、数据驻留与流水优化，减少可避免的执行空隙与数据搬运。
+  en: Models SIMD/NPU operator dependencies as a directed acyclic graph and jointly studies topological scheduling, data residency, and pipeline optimization under limited on-chip cache to reduce avoidable execution slack and data movement.
 problem:
   zh: 面向 SIMD/NPU 架构，计算图调度既要满足算子的拓扑依赖与执行单元约束，也要处理片上缓存容量、数据驻留和 DMA 搬运开销；缓存受限时，简单的就绪队列策略容易产生重复换入换出和流水空隙。
   en: On SIMD/NPU architectures, compute-graph scheduling must satisfy operator dependencies and execution-unit constraints while managing limited on-chip capacity, data residency, and DMA movement. Under cache pressure, a readiness-only policy can trigger repeated swaps and avoidable pipeline gaps.

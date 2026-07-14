@@ -406,6 +406,7 @@ html[lang='en'] .profile-copy h1 {
 }
 
 .profile-links svg {
+	flex: 0 0 auto;
 	width: 17px;
 	height: 17px;
 	fill: none;
@@ -714,6 +715,7 @@ html[lang='en'] .profile-copy h1 {
 }
 
 .education-headline h3 {
+	min-width: 0;
 	margin: 0;
 	font-family: var(--sans);
 	font-size: 1rem;
@@ -751,6 +753,31 @@ html[lang='en'] .profile-copy h1 {
 	flex-wrap: wrap;
 	align-items: baseline;
 	gap: 0.22rem 0.48rem;
+}
+
+.education-advisor-group {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 0.48rem;
+}
+
+@media (min-width: 1100px) {
+	.education-headline--with-advisor {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) max-content;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.education-headline--with-advisor .education-advisor-group {
+		flex-wrap: nowrap;
+		white-space: nowrap;
+	}
+
+	html[lang='zh-CN'] .education-headline--with-advisor .education-entry-copy {
+		flex-wrap: nowrap;
+		white-space: nowrap;
+	}
 }
 
 .activity-headline {
