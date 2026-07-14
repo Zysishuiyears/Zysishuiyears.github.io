@@ -110,11 +110,11 @@ export const educationProfiles = [
 				title: { zh: '主修课程', en: 'Major coursework' },
 				items: {
 					zh: [
-						'理论类课程：数学分析 I–III、高等代数 I–II、运筹学、解析几何、概率论、常微分方程、实变函数、数学物理方程、数理统计、时间序列分析、应用统计系列课程（统计分析、统计建模、统计推断）、数据科学、贝叶斯统计计算、优化方法、数值方法、决策科学、博弈论基础。',
+						'理论类课程：数学分析 I–III、高等代数 I–II、运筹学、解析几何、概率论、常微分方程、实变函数、复变函数、泛函分析、数学物理方程、数理统计、时间序列分析、应用统计系列课程（统计分析、统计建模、统计推断）、数据科学、贝叶斯统计计算、优化方法、数值方法、决策科学、博弈论基础。',
 						'实践类课程：数学建模、数学实践、数学软件、算法与数据结构分析、C 程序设计、数学项目。',
 					],
 					en: [
-						'Theory courses: Mathematical Analysis I–III, Advanced Algebra I–II, Operations Research, Analytic Geometry, Probability Theory, Ordinary Differential Equations, Real Analysis, Equations of Mathematical Physics, Mathematical Statistics, Time Series Analysis, Applied Statistics (Statistical Analysis, Statistical Modeling, and Statistical Inference), Data Science, Bayesian Statistical Computing, Optimization Methods, Numerical Methods, Decision Science, and Foundations of Game Theory.',
+						'Theory courses: Mathematical Analysis I–III, Advanced Algebra I–II, Operations Research, Analytic Geometry, Probability Theory, Ordinary Differential Equations, Real Analysis, Complex Analysis, Functional Analysis, Equations of Mathematical Physics, Mathematical Statistics, Time Series Analysis, Applied Statistics (Statistical Analysis, Statistical Modeling, and Statistical Inference), Data Science, Bayesian Statistical Computing, Optimization Methods, Numerical Methods, Decision Science, and Foundations of Game Theory.',
 						'Practice courses: Mathematical Modeling, Mathematical Practice, Mathematical Software, Algorithm and Data Structure Analysis, C Programming, and Mathematics Project.',
 					],
 				},
