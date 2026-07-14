@@ -695,10 +695,6 @@ a {
 	font-size: 0.8rem !important;
 }
 
-.publication-description {
-	color: var(--text-soft);
-}
-
 .education-headline {
 	display: flex;
 	flex-wrap: wrap;

@@ -46,5 +46,5 @@ tags:
   - k-core
 links:
   repo: https://github.com/Zysishuiyears/scream-effect-propagation-simulation
-  paper: https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09
+  paper: /papers/scream-effect-propagation-simulation.pdf
 ---

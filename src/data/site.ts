@@ -85,8 +85,6 @@ export const homeContent = {
 				citationDetails: 'Submitted manuscript, 2026.',
 				note: '数学类论文严格字母排序',
 				date: '2026.06',
-				description:
-					'利用次可加不等式、匹配分解、周期构造与局部结构分析研究路、圈及其笛卡尔积上的 B-coloring，并使用 SAT 求解辅助小规模搜索。',
 				link: undefined,
 				repository: 'https://github.com/Zysishuiyears/Graph-Theory-B-coloring-of-Cartesian-products',
 			},
@@ -97,9 +95,7 @@ export const homeContent = {
 				citationDetails: '数学建模及其应用, 2023, 12(4): 64–72, 106. DOI: 10.19943/j.2095-3070.jmmia.2023.04.09.',
 				note: undefined,
 				date: '2023.12',
-				description:
-					'将信息异常放大建模为加权有向网络，结合 SEIR、脉冲函数、LeaderRank 与 k-core 分析传播机制和干预策略。',
-				link: 'https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09',
+				link: '/papers/scream-effect-propagation-simulation.pdf',
 				repository: 'https://github.com/Zysishuiyears/scream-effect-propagation-simulation',
 			},
 		],
@@ -225,8 +221,6 @@ export const homeContent = {
 				citationDetails: 'Submitted manuscript, 2026.',
 				note: 'Authors are listed in strict alphabetical order, as customary in mathematics.',
 				date: '2026.06',
-				description:
-					'Studies B-coloring on paths, cycles, and Cartesian products using subadditive inequalities, matching decompositions, periodic constructions, local analysis, and SAT-assisted search.',
 				link: undefined,
 				repository: 'https://github.com/Zysishuiyears/Graph-Theory-B-coloring-of-Cartesian-products',
 			},
@@ -237,9 +231,7 @@ export const homeContent = {
 				citationDetails: 'Mathematical Modeling and Its Applications 12, no. 4 (2023): 64–72, 106. https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09.',
 				note: undefined,
 				date: 'Dec. 2023',
-				description:
-					'Models anomalous information amplification as a weighted directed network using SEIR dynamics, pulse functions, LeaderRank, and k-core analysis.',
-				link: 'https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09',
+				link: '/papers/scream-effect-propagation-simulation.pdf',
 				repository: 'https://github.com/Zysishuiyears/scream-effect-propagation-simulation',
 			},
 		],

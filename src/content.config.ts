@@ -7,6 +7,11 @@ const localizedText = z.object({
 	en: z.string(),
 });
 
+const resourceLink = z.union([
+	z.url(),
+	z.string().regex(/^\/(?!\/)/, 'Expected an absolute URL or a root-relative site path'),
+]);
+
 const projects = defineCollection({
 	loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
 	schema: z.object({
@@ -27,9 +32,9 @@ const projects = defineCollection({
 		tags: z.array(z.string()),
 		links: z
 			.object({
-				repo: z.url().optional(),
-				paper: z.url().optional(),
-				demo: z.url().optional(),
+				repo: resourceLink.optional(),
+				paper: resourceLink.optional(),
+				demo: resourceLink.optional(),
 			})
 			.default({}),
 		media: z
