@@ -1,7 +1,7 @@
 ---
 import { Picture } from 'astro:assets';
 import profilePhoto from '../assets/jiang-zhengxu.jpg';
-import { githubUrl, homeContent, localeMeta, nankaiSmsUrl, publicEmail, type Locale } from '../data/site';
+import { githubUrl, homeContent, localeMeta, nankaiMathUrl, publicEmail, type Locale } from '../data/site';
 import GraphMotif from './GraphMotif.astro';
 
 interface Props {
@@ -37,7 +37,7 @@ const meta = localeMeta[locale];
 				<span>{content.profileLocation}</span>
 			</li>
 			<li>
-				<a class="profile-institution-link" href={nankaiSmsUrl} target="_blank" rel="noreferrer">
+				<a class="profile-institution-link" href={nankaiMathUrl} target="_blank" rel="noreferrer">
 					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5M5 10v8m4-8v8m6-8v8m4-8v8M3 20h18" /></svg>
 					<span>{content.profileInstitution}</span>
 				</a>

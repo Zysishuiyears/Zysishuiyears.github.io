@@ -3,7 +3,7 @@ export type Locale = 'zh' | 'en';
 export const siteUrl = 'https://zysishuiyears.github.io';
 export const publicEmail = 'jiangzhengxuoucstu@163.com';
 export const githubUrl = 'https://github.com/Zysishuiyears';
-export const nankaiSmsUrl = 'https://sms.nankai.edu.cn/';
+export const nankaiMathUrl = 'https://math.nankai.edu.cn/';
 export const advisorUrl = 'https://www.lijiaao-dm-nk.com/';
 
 export const localeMeta = {
@@ -227,7 +227,7 @@ export const homeContent = {
 				repository: 'https://github.com/Zysishuiyears/Graph-Theory-B-coloring-of-Cartesian-products',
 			},
 			{
-				title: 'Research of the propagation mechanism of scream effect and its simulation (in Chinese)',
+				title: 'Research of the propagation mechanism of scream effect and its simulation',
 				authors: 'Zhengxu Jiang, Jiaqi Yao, Lingjun Meng, Jian Wang, and Yongchang Cao',
 				citationMarker: '.',
 				citationDetails: 'Mathematical Modeling and Its Applications 12, no. 4 (2023): 64–72, 106. https://doi.org/10.19943/j.2095-3070.jmmia.2023.04.09.',
