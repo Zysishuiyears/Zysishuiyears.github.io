@@ -4,6 +4,7 @@ export const siteUrl = 'https://zysishuiyears.github.io';
 export const publicEmail = 'jiangzhengxuoucstu@163.com';
 export const githubUrl = 'https://github.com/Zysishuiyears';
 export const nankaiSmsUrl = 'https://sms.nankai.edu.cn/';
+export const advisorUrl = 'https://www.lijiaao-dm-nk.com/';
 
 export const localeMeta = {
 	zh: {
@@ -57,15 +58,16 @@ export const navItems = {
 
 export const homeContent = {
 	zh: {
-		profileBio: '结构图论、带约束的图染色与组合优化。',
 		profileLocation: '天津，中国',
 		profileInstitution: '南开大学数学科学学院',
 		availability: '欢迎科研合作与算法实习交流',
 		aboutTitle: '关于我',
-		intro: [
-			'我是姜政旭，现为南开大学数学科学学院应用数学硕士研究生，导师为李佳傲教授。',
-			'我的研究主要围绕结构图论、图染色与组合优化展开，当前关注带有额外约束的特殊染色问题，例如涉及圈结构、符号图等条件的染色，以及相应图类的结构性质。我也对复杂网络建模及其应用方向感兴趣，欢迎围绕图论、图算法与组合优化开展交流。',
-		],
+		intro: {
+			beforeAdvisor: '我是姜政旭，现为南开大学数学科学学院应用数学系的图论硕士研究生，导师为',
+			advisorLabel: '李佳傲教授',
+			beforeK: '。我的研究领域为结构图论与组合优化，目前关注带有特殊限制的图染色问题，例如涉及彩虹圈、',
+			afterK: '-退化、禁止子图等结构条件的边染色；以及组合优化工具在结构图论问题中的应用。此前，我也从事复杂网络上动态建模方向的研究，特别是研究图上信息流动与实体状态演化，并尝试解决富有实际意义的问题。如果你对这些领域感兴趣，欢迎随时联系我！',
+		},
 		focusTitle: '研究兴趣',
 		focusAreas: [
 			{
@@ -108,14 +110,12 @@ export const homeContent = {
 				institution: '南开大学 · 数学科学学院',
 				degree: '应用数学硕士（图论与组合优化）',
 				period: '2025.09 – 2028.06（预计）',
-				advisor: { label: '导师：李佳傲教授', url: 'https://www.lijiaao-dm-nk.com/' },
 			},
 			{
 				slug: 'ouc',
 				institution: '中国海洋大学 · 数学与应用数学',
 				degree: '理学荣誉学士',
 				period: '2021.09 – 2025.06',
-				advisor: undefined,
 			},
 		],
 		selectedWorkTitle: '其他竞赛经历',
@@ -195,15 +195,16 @@ export const homeContent = {
 		githubLabel: 'GitHub',
 	},
 	en: {
-		profileBio: 'Structural graph theory, constrained graph coloring, and combinatorial optimization.',
 		profileLocation: 'Tianjin, China',
 		profileInstitution: 'School of Mathematical Sciences, Nankai University',
 		availability: 'Open to research collaboration and algorithm internships',
 		aboutTitle: 'About Me',
-		intro: [
-			'I am Zhengxu Jiang, an M.S. student in Applied Mathematics at the School of Mathematical Sciences, Nankai University, advised by Prof. Jiaao Li.',
-			'My research focuses on structural graph theory, graph coloring, and combinatorial optimization. I am particularly interested in coloring problems with additional constraints, including those arising from cycle structures, signed graphs, and related graph classes. I am also interested in the modeling and applications of complex networks, and welcome discussions on graph theory, graph algorithms, and combinatorial optimization.',
-		],
+		intro: {
+			beforeAdvisor: 'I am Zhengxu Jiang, currently an M.S. student in graph theory in the Department of Applied Mathematics, School of Mathematical Sciences, Nankai University, advised by ',
+			advisorLabel: 'Prof. Jiaao Li',
+			beforeK: '. My research areas are structural graph theory and combinatorial optimization. I currently focus on graph-coloring problems with special constraints, including edge-coloring problems involving structural conditions such as rainbow cycles, ',
+			afterK: '-degeneracy, and forbidden subgraphs, as well as applications of combinatorial-optimization tools to problems in structural graph theory. Previously, I also conducted research on dynamic modeling over complex networks, particularly information flow on graphs and the evolution of entity states, with the aim of addressing practically meaningful problems. If you are interested in these areas, please feel free to contact me!',
+		},
 		focusTitle: 'Research Interests',
 		focusAreas: [
 			{
@@ -246,14 +247,12 @@ export const homeContent = {
 				institution: 'Nankai University · School of Mathematical Sciences',
 				degree: 'M.S. in Applied Mathematics',
 				period: 'Sep. 2025 – Jun. 2028 (expected)',
-				advisor: { label: 'Advisor: Prof. Jiaao Li', url: 'https://www.lijiaao-dm-nk.com/' },
 			},
 			{
 				slug: 'ouc',
 				institution: 'Ocean University of China · Mathematics and Applied Mathematics',
 				degree: 'Honorary Bachelor of Science',
 				period: 'Sep. 2021 – Jun. 2025',
-				advisor: undefined,
 			},
 		],
 		selectedWorkTitle: 'Other Competition Experience',

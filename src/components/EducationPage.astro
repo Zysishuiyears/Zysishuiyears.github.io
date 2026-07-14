@@ -17,8 +17,8 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 const canonicalPath = `${educationBase}/${profile.slug}/`;
 const alternatePath = locale === 'zh' ? `/en/education/${profile.slug}/` : `/education/${profile.slug}/`;
 const labels = locale === 'zh'
-	? { back: '返回教育经历', external: '在新窗口打开' }
-	: { back: 'Back to education', external: 'Opens in a new tab' };
+	? { back: '返回教育经历' }
+	: { back: 'Back to education' };
 ---
 
 <BaseLayout
@@ -43,11 +43,6 @@ const labels = locale === 'zh'
 				</div>
 				<div class="education-degree-row">
 					<p class="education-degree-line">{profile.school[locale]} · {profile.degree[locale]}</p>
-					{profile.advisor && (
-						<a class="button-link education-advisor-button" href={profile.advisor.url} target="_blank" rel="noreferrer">
-							{profile.advisor.label[locale]}<span aria-hidden="true"> ↗</span><span class="sr-only">{labels.external}</span>
-						</a>
-					)}
 				</div>
 				{profile.showSummary !== false && <p class="project-lead">{profile.summary[locale]}</p>}
 			</header>

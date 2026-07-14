@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { educationLogos } from '../data/education-branding';
-import { githubUrl, homeContent, publicEmail, type Locale } from '../data/site';
+import { advisorUrl, githubUrl, homeContent, publicEmail, type Locale } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from './Header.astro';
 import ProfileSidebar from './ProfileSidebar.astro';
@@ -27,9 +27,10 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 		<article class="content-column">
 			<section class="about-section" aria-labelledby="about-title" data-intro>
 				<span class="anchor" id="about"></span>
-				<p class="kicker">Graph theory · Algorithms · Optimization</p>
 				<h2 id="about-title"><span class="section-heading__icon" aria-hidden="true">👋</span>{content.aboutTitle}</h2>
-				{content.intro.map((paragraph) => <p>{paragraph}</p>)}
+				<p>
+					{content.intro.beforeAdvisor}<a class="about-advisor-link" href={advisorUrl} target="_blank" rel="noreferrer">{content.intro.advisorLabel}</a>{content.intro.beforeK}<em>k</em>{content.intro.afterK}
+				</p>
 			</section>
 
 			<section class="content-section" aria-labelledby="experience-heading">
@@ -39,7 +40,7 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 						<article class="timeline-entry" data-reveal>
 							<div class="timeline-period">{entry.period}</div>
 							<div>
-								<div class:list={['education-headline', { 'education-headline--with-advisor': entry.advisor }]}>
+								<div class="education-headline">
 									<h3>
 										<a class="education-entry-link" href={`${educationBase}/${entry.slug}/`}>
 											<img class="education-logo" src={educationLogos[entry.slug].src} width="48" height="48" alt="" loading="lazy" decoding="async" />
@@ -50,12 +51,6 @@ const educationBase = locale === 'zh' ? '/education' : '/en/education';
 											</span>
 										</a>
 									</h3>
-									{entry.advisor && (
-										<span class="education-advisor-group">
-											<span class="education-separator" aria-hidden="true">·</span>
-											<a class="education-advisor" href={entry.advisor.url} target="_blank" rel="noreferrer">{entry.advisor.label}</a>
-										</span>
-									)}
 								</div>
 							</div>
 						</article>

@@ -340,7 +340,7 @@ a {
 	flex-wrap: nowrap;
 	align-items: baseline;
 	gap: 0.4rem;
-	margin: 0.85rem 0 0.7rem;
+	margin: 0.85rem 0 0.35rem;
 }
 
 .profile-name-row > * {
@@ -356,12 +356,6 @@ html[lang='en'] .profile-copy h1 {
 	color: var(--text-faint);
 	font-family: var(--serif);
 	font-size: 0.84rem;
-}
-
-.profile-bio {
-	color: var(--text-soft);
-	font-size: 0.85rem;
-	line-height: 1.65;
 }
 
 .profile-availability {
@@ -473,6 +467,22 @@ html[lang='en'] .profile-copy h1 {
 	max-width: 75ch;
 	color: #30394a;
 	font-size: 1.01rem;
+}
+
+.about-advisor-link {
+	color: var(--resource-link);
+	font-weight: 650;
+	text-decoration: none;
+}
+
+.about-advisor-link:hover,
+.about-advisor-link:focus-visible {
+	color: var(--resource-link);
+	text-decoration: none;
+}
+
+.about-section em {
+	font-family: var(--serif);
 }
 
 .content-section {
@@ -755,31 +765,6 @@ html[lang='en'] .profile-copy h1 {
 	gap: 0.22rem 0.48rem;
 }
 
-.education-advisor-group {
-	display: inline-flex;
-	align-items: baseline;
-	gap: 0.48rem;
-}
-
-@media (min-width: 1100px) {
-	.education-headline--with-advisor {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) max-content;
-		align-items: center;
-		gap: 0.75rem;
-	}
-
-	.education-headline--with-advisor .education-advisor-group {
-		flex-wrap: nowrap;
-		white-space: nowrap;
-	}
-
-	html[lang='zh-CN'] .education-headline--with-advisor .education-entry-copy {
-		flex-wrap: nowrap;
-		white-space: nowrap;
-	}
-}
-
 .activity-headline {
 	display: flex;
 	flex-wrap: wrap;
@@ -814,13 +799,6 @@ abbr.activity-detail {
 
 .education-separator {
 	color: var(--text-faint);
-}
-
-.education-advisor {
-	color: var(--resource-link);
-	font-weight: 650;
-	text-decoration: underline;
-	text-underline-offset: 0.18em;
 }
 
 .entry-meta {
@@ -1184,11 +1162,6 @@ abbr.activity-detail {
 	font-weight: 700;
 }
 
-.education-advisor-button {
-	padding: 0.28rem 0.55rem;
-	font-size: 0.78rem;
-}
-
 .education-sections {
 	margin-top: 1.5rem;
 	border-top: 1px solid var(--border);
@@ -1360,10 +1333,6 @@ abbr.activity-detail {
 		margin-top: 0;
 	}
 
-	.profile-bio {
-		max-width: 62ch;
-	}
-
 	.profile-links {
 		display: flex;
 		flex-wrap: wrap;
@@ -1404,10 +1373,6 @@ abbr.activity-detail {
 
 	.profile-name-row {
 		margin-bottom: 0.35rem;
-	}
-
-	.profile-bio {
-		font-size: 0.8rem;
 	}
 
 	.profile-availability {

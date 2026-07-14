@@ -25,10 +25,6 @@ export interface EducationProfile {
 	location: Localized<string>;
 	summary: Localized<string>;
 	showSummary?: boolean;
-	advisor?: {
-		label: Localized<string>;
-		url: string;
-	};
 	sections: readonly EducationSection[];
 }
 
@@ -43,10 +39,6 @@ export const educationProfiles = [
 		summary: {
 			zh: '保研录取，研究方向为图论与组合优化，当前主要关注结构图论、图染色以及平面图与特殊图类上的 B-coloring 问题。',
 			en: 'Admitted through graduate recommendation, with a research focus on graph theory and combinatorial optimization, particularly structural graph theory, graph coloring, and B-coloring on planar and other special graph classes.',
-		},
-		advisor: {
-			label: { zh: '导师：李佳傲教授', en: 'Advisor: Prof. Jiaao Li' },
-			url: 'https://www.lijiaao-dm-nk.com/',
 		},
 		sections: [
 			{
