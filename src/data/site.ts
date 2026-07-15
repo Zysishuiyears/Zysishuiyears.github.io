@@ -222,7 +222,7 @@ export const homeContent = {
 				citationMarker: '.',
 				citationDetails: 'Manuscript in preparation, 2026.',
 				note: 'Authors are listed in strict alphabetical order, as customary in mathematics.',
-				date: '2026.06',
+				date: 'Jun. 2026',
 				link: undefined,
 				repository: 'https://github.com/Zysishuiyears/Graph-Theory-B-coloring-of-Cartesian-products',
 			},
