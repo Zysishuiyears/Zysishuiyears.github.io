@@ -60,7 +60,7 @@ export const homeContent = {
 	zh: {
 		profileLocation: '天津，中国',
 		profileInstitution: '南开大学数学科学学院',
-		availability: '欢迎科研合作与算法实习交流',
+		availability: '欢迎公开合作',
 		aboutTitle: '关于我',
 		intro: {
 			beforeAdvisor: '我是姜政旭，现为南开大学数学科学学院应用数学系的图论硕士研究生，导师为',
@@ -194,7 +194,7 @@ export const homeContent = {
 	en: {
 		profileLocation: 'Tianjin, China',
 		profileInstitution: 'School of Mathematical Sciences, Nankai University',
-		availability: 'Open to research collaboration and algorithm internships',
+		availability: 'Open to collaboration',
 		aboutTitle: 'About Me',
 		intro: {
 			beforeAdvisor: 'I am Zhengxu Jiang, currently an M.S. student in graph theory in the Department of Applied Mathematics, School of Mathematical Sciences, Nankai University, advised by ',
