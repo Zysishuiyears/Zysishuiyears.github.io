@@ -83,13 +83,13 @@ export const homeContent = {
 		publicationsTitle: '论文与研究成果',
 		publications: [
 			{
-				title: 'B-coloring of Cartesian Products of Paths and Cycles',
+				title: 'B-coloring of grid graphs',
 				authors: 'Zhengxu Jiang, Jiaao Li',
 				citationMarker: '.',
-				citationDetails: 'Manuscript in preparation, 2026.',
+				citationDetails: 'Manuscript completed, 2026.',
 				note: '数学类论文严格字母排序',
 				date: '2026.06',
-				link: undefined,
+				link: '/papers/b-coloring-of-grid-graphs.pdf',
 				repository: 'https://github.com/Zysishuiyears/Graph-Theory-B-coloring-of-Cartesian-products',
 			},
 			{
@@ -217,13 +217,13 @@ export const homeContent = {
 		publicationsTitle: 'Publications and Research',
 		publications: [
 			{
-				title: 'B-coloring of Cartesian Products of Paths and Cycles',
+				title: 'B-coloring of grid graphs',
 				authors: 'Zhengxu Jiang and Jiaao Li',
 				citationMarker: '.',
-				citationDetails: 'Manuscript in preparation, 2026.',
+				citationDetails: 'Manuscript completed, 2026.',
 				note: 'Authors are listed in strict alphabetical order, as customary in mathematics.',
 				date: 'Jun. 2026',
-				link: undefined,
+				link: '/papers/b-coloring-of-grid-graphs.pdf',
 				repository: 'https://github.com/Zysishuiyears/Graph-Theory-B-coloring-of-Cartesian-products',
 			},
 			{
