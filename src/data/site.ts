@@ -84,7 +84,7 @@ export const homeContent = {
 		publications: [
 			{
 				title: 'B-coloring of grid graphs',
-				authors: 'Zhengxu Jiang, Jiaao Li',
+				authors: 'Zhengxu Jiang and Jiaao Li',
 				citationMarker: '.',
 				citationDetails: 'arXiv:2608.21774 [math.CO] (2026).',
 				note: '数学类论文严格字母排序',
