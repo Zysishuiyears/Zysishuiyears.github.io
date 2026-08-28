@@ -39,22 +39,18 @@ const educationBase = locale === 'zh' ? '/zh/education' : '/education';
 				<SectionHeading id="experience" title={content.experienceTitle} icon="🎓" />
 				<div class="timeline-list">
 					{content.education.map((entry) => (
-						<article class="timeline-entry" data-reveal>
-							<div class="timeline-period">{entry.period}</div>
-							<div>
-								<div class="education-headline">
-									<h3>
-										<a class="education-entry-link" href={`${educationBase}/${entry.slug}/`}>
-											<img class="education-logo" src={educationLogos[entry.slug].src} width="48" height="48" alt="" loading="lazy" decoding="async" />
-											<span class="education-entry-copy">
-												<span>{entry.institution}</span>
-												<span class="education-separator" aria-hidden="true">·</span>
-												<span class="education-degree">{entry.degree}</span>
-											</span>
-										</a>
-									</h3>
-								</div>
-							</div>
+						<article class="education-entry" data-reveal>
+							<a class="education-entry-link" href={`${educationBase}/${entry.slug}/`}>
+								<img class="education-logo" src={educationLogos[entry.slug].src} width="48" height="48" alt="" loading="lazy" decoding="async" />
+								<h3>
+									<span class="education-entry-copy">
+										<span>{entry.institution}</span>
+										<span class="education-separator" aria-hidden="true">·</span>
+										<span class="education-degree">{entry.degree}</span>
+									</span>
+								</h3>
+								<span class="education-period">{entry.period}</span>
+							</a>
 						</article>
 					))}
 				</div>
@@ -78,7 +74,7 @@ const educationBase = locale === 'zh' ? '/zh/education' : '/education';
 					{content.internships.map((entry) => (
 						<article class="internship-entry" data-reveal>
 							<div class="internship-brand">
-								<Image class="internship-logo" src={thunlpLogo} width={128} height={128} alt={entry.logoAlt} loading="lazy" />
+								<Image class="internship-logo" src={thunlpLogo} width={96} height={96} alt={entry.logoAlt} loading="lazy" />
 							</div>
 							<div class="internship-copy">
 								<div class="internship-heading">
