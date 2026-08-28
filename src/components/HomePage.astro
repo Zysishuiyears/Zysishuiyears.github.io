@@ -1,5 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import thunlpLogo from '../assets/experience/thunlp-logo.png';
 import { educationLogos } from '../data/education-branding';
 import { advisorUrl, githubUrl, homeContent, publicEmail, type Locale } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -68,6 +70,28 @@ const educationBase = locale === 'zh' ? '/zh/education' : '/education';
 						</li>
 					))}
 				</ol>
+			</section>
+
+			<section class="content-section" aria-labelledby="internships-heading">
+				<SectionHeading id="internships" title={content.internshipsTitle} icon="💼" />
+				<div class="internship-list">
+					{content.internships.map((entry) => (
+						<article class="internship-entry" data-reveal>
+							<div class="internship-brand">
+								<Image class="internship-logo" src={thunlpLogo} width={128} height={128} alt={entry.logoAlt} loading="lazy" />
+							</div>
+							<div class="internship-copy">
+								<h3>{entry.institution}</h3>
+								<p class="internship-role">{entry.role}</p>
+								<p class="internship-description">{entry.description}</p>
+							</div>
+							<div class="internship-meta">
+								<span>{entry.period}</span>
+								<span>{entry.location}</span>
+							</div>
+						</article>
+					))}
+				</div>
 			</section>
 
 			<section class="content-section" aria-labelledby="publications-heading">

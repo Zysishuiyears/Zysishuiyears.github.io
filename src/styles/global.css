@@ -779,6 +779,59 @@ html[lang='en'] .profile-copy h1 {
 	font-weight: 750;
 }
 
+.internship-entry {
+	display: grid;
+	grid-template-columns: 128px minmax(0, 1fr) 170px;
+	align-items: start;
+	gap: 1.5rem;
+	padding: 1.2rem 0 1.35rem;
+	border-bottom: 1px solid var(--border-soft);
+}
+
+.internship-brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 108px;
+}
+
+.internship-logo {
+	display: block;
+	width: min(100%, 112px);
+	height: auto;
+	object-fit: contain;
+}
+
+.internship-copy h3 {
+	margin: 0 0 0.55rem;
+	font-family: var(--sans);
+	font-size: 1rem;
+	font-weight: 750;
+}
+
+.internship-entry p {
+	margin-bottom: 0.38rem;
+}
+
+.internship-role {
+	color: var(--text);
+	font-weight: 650;
+}
+
+.internship-description {
+	color: var(--text-soft);
+}
+
+.internship-meta {
+	display: grid;
+	gap: 0.48rem;
+	color: var(--text-faint);
+	font-size: 0.78rem;
+	font-variant-numeric: tabular-nums;
+	line-height: 1.55;
+	text-align: right;
+}
+
 .activity-detail {
 	color: var(--text-soft);
 }
@@ -1404,6 +1457,27 @@ abbr.activity-detail {
 
 	.activity-list .timeline-entry {
 		grid-template-columns: 1fr;
+	}
+
+	.internship-entry {
+		grid-template-columns: 64px minmax(0, 1fr);
+		gap: 0.9rem 1rem;
+	}
+
+	.internship-brand {
+		grid-row: 1 / span 2;
+		min-height: 0;
+	}
+
+	.internship-logo {
+		width: 64px;
+	}
+
+	.internship-meta {
+		grid-column: 2;
+		grid-row: 2;
+		gap: 0.18rem;
+		text-align: left;
 	}
 
 	.honors-list {

@@ -34,6 +34,7 @@ export const navItems = {
 		{ href: '#about', label: '首页' },
 		{ href: '#experience', label: '教育经历' },
 		{ href: '#research', label: '研究兴趣' },
+		{ href: '#internships', label: '实习' },
 		{ href: '#publications', label: '论文' },
 		{ href: '#projects', label: '项目' },
 		{ href: '#activities', label: '学术交流' },
@@ -46,6 +47,7 @@ export const navItems = {
 		{ href: '#about', label: 'Home' },
 		{ href: '#experience', label: 'Education' },
 		{ href: '#research', label: 'Research Interests' },
+		{ href: '#internships', label: 'Internship' },
 		{ href: '#publications', label: 'Publications' },
 		{ href: '#projects', label: 'Projects' },
 		{ href: '#activities', label: 'Academic Exchange' },
@@ -77,6 +79,17 @@ export const homeContent = {
 			{
 				title: '复杂网络动态建模与应用',
 				description: '关注图上信息流动、实体状态演化及其在实际问题中的动态建模与分析。',
+			},
+		],
+		internshipsTitle: '实习经历',
+		internships: [
+			{
+				period: '2026.08 – 至今',
+				location: '北京 · 启元实验室',
+				institution: '清华大学自然语言处理与社会人文计算实验室（THUNLP）',
+				role: '科研实习生',
+				description: '研究大模型的“知识记忆与增强”。',
+				logoAlt: '清华大学自然语言处理与社会人文计算实验室标识',
 			},
 		],
 		projectsTitle: '项目',
@@ -212,6 +225,17 @@ export const homeContent = {
 			{
 				title: 'Dynamic Modeling and Applications on Complex Networks',
 				description: 'Dynamic modeling and analysis of information flow on graphs, the evolution of entity states, and related real-world problems.',
+			},
+		],
+		internshipsTitle: 'Research Experience',
+		internships: [
+			{
+				period: 'Aug. 2026 – Present',
+				location: 'Beijing · Qiyuan Laboratory',
+				institution: 'Tsinghua University Natural Language Processing and Social Computing Lab (THUNLP)',
+				role: 'Research Intern',
+				description: 'Research on knowledge memory and enhancement for large language models.',
+				logoAlt: 'Logo of the Tsinghua University Natural Language Processing and Social Computing Lab',
 			},
 		],
 		projectsTitle: 'Projects',
