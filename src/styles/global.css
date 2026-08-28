@@ -781,9 +781,9 @@ html[lang='en'] .profile-copy h1 {
 
 .internship-entry {
 	display: grid;
-	grid-template-columns: 128px minmax(0, 1fr) 170px;
+	grid-template-columns: 116px minmax(0, 1fr) 155px;
 	align-items: start;
-	gap: 1.5rem;
+	gap: 1.25rem;
 	padding: 1.2rem 0 1.35rem;
 	border-bottom: 1px solid var(--border-soft);
 }
@@ -802,8 +802,17 @@ html[lang='en'] .profile-copy h1 {
 	object-fit: contain;
 }
 
-.internship-copy h3 {
-	margin: 0 0 0.55rem;
+.internship-heading {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1.15rem;
+	margin-bottom: 0.65rem;
+}
+
+.internship-heading h3 {
+	margin: 0;
 	font-family: var(--sans);
 	font-size: 1rem;
 	font-weight: 750;
@@ -814,12 +823,19 @@ html[lang='en'] .profile-copy h1 {
 }
 
 .internship-role {
+	flex: 0 0 auto;
 	color: var(--text);
+	font-size: 0.92rem;
 	font-weight: 650;
 }
 
 .internship-description {
 	color: var(--text-soft);
+}
+
+.internship-description strong {
+	color: var(--text);
+	font-weight: 700;
 }
 
 .internship-meta {
@@ -1471,6 +1487,12 @@ abbr.activity-detail {
 
 	.internship-logo {
 		width: 64px;
+	}
+
+	.internship-heading {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 0.32rem 0.8rem;
 	}
 
 	.internship-meta {

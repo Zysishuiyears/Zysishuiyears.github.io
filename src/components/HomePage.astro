@@ -81,9 +81,11 @@ const educationBase = locale === 'zh' ? '/zh/education' : '/education';
 								<Image class="internship-logo" src={thunlpLogo} width={128} height={128} alt={entry.logoAlt} loading="lazy" />
 							</div>
 							<div class="internship-copy">
-								<h3>{entry.institution}</h3>
-								<p class="internship-role">{entry.role}</p>
-								<p class="internship-description">{entry.description}</p>
+								<div class="internship-heading">
+									<h3>{entry.institution}</h3>
+									<span class="internship-role">{entry.role}</span>
+								</div>
+								<p class="internship-description"><strong>{locale === 'zh' ? '研究内容：' : 'Research Focus: '}</strong>{entry.description}</p>
 							</div>
 							<div class="internship-meta">
 								<span>{entry.period}</span>
