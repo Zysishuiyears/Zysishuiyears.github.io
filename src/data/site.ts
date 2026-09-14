@@ -96,6 +96,16 @@ export const homeContent = {
 		publicationsTitle: '论文与研究成果',
 		publications: [
 			{
+				title: 'B-coloring of K₂,ₜ-free planar graphs',
+				authors: 'Zhengxu Jiang',
+				citationMarker: '.',
+				citationDetails: 'arXiv:2609.12519 [math.CO] (2026).',
+				note: undefined,
+				date: '2026.09',
+				link: 'https://arxiv.org/pdf/2609.12519',
+				repository: undefined,
+			},
+			{
 				title: 'B-coloring of grid graphs',
 				authors: 'Zhengxu Jiang and Jiaao Li',
 				citationMarker: '.',
@@ -195,6 +205,7 @@ export const homeContent = {
 		],
 		newsTitle: '动态',
 		news: [
+			{ date: '2026.09', text: '论文 “B-coloring of K₂,ₜ-free planar graphs” 上线 arXiv。' },
 			{ date: '2026.08', text: '论文 “B-coloring of grid graphs” 上线 arXiv。' },
 			{ date: '2025.11', text: '获得“华为杯”研究生数学建模竞赛全国三等奖。' },
 			{ date: '2025.09', text: '进入南开大学攻读应用数学硕士学位。' },
@@ -241,6 +252,16 @@ export const homeContent = {
 		projectsTitle: 'Projects',
 		publicationsTitle: 'Publications and Research',
 		publications: [
+			{
+				title: 'B-coloring of K₂,ₜ-free planar graphs',
+				authors: 'Zhengxu Jiang',
+				citationMarker: '.',
+				citationDetails: 'arXiv:2609.12519 [math.CO] (2026).',
+				note: undefined,
+				date: 'Sep. 2026',
+				link: 'https://arxiv.org/pdf/2609.12519',
+				repository: undefined,
+			},
 			{
 				title: 'B-coloring of grid graphs',
 				authors: 'Zhengxu Jiang and Jiaao Li',
@@ -341,6 +362,7 @@ export const homeContent = {
 		],
 		newsTitle: 'News',
 		news: [
+			{ date: '2026.09', text: 'Posted “B-coloring of K₂,ₜ-free planar graphs” on arXiv.' },
 			{ date: '2026.08', text: 'Posted “B-coloring of grid graphs” on arXiv.' },
 			{ date: '2025.11', text: 'Won a National Third Prize in the China Postgraduate Mathematical Contest in Modeling.' },
 			{ date: '2025.09', text: 'Began M.S. studies in Applied Mathematics at Nankai University.' },
