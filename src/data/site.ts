@@ -82,12 +82,12 @@ export const homeContent = {
 		focusTitle: '研究兴趣',
 		focusAreas: [
 			{
-				title: '结构图论与组合优化',
-				description: '关注与圈结构、符号图等附加条件相关的染色问题，以及相应图类的结构性质。',
+				title: '智能体强化学习与自进化',
+				description: '关注智能体如何从交互反馈、记忆和经验中持续获得新能力，重点研究强化学习中的信用分配、技能学习与复用，以及策略与记忆的协同优化；探索结构化表示对经验组织、推理和持续适应的作用。',
 			},
 			{
-				title: '强化学习智能体的技能学习与优化',
-				description: '关注智能体技能的获取、检索、组合与更新，以及策略与技能库的协同优化；探索结构化关系在技能组织和推理中的作用。',
+				title: '结构图论与组合优化',
+				description: '关注与圈结构、符号图等附加条件相关的染色问题，以及相应图类的结构性质。',
 			},
 		],
 		internshipsTitle: '实习经历',
@@ -248,12 +248,12 @@ export const homeContent = {
 		focusTitle: 'Research Interests',
 		focusAreas: [
 			{
-				title: 'Structural Graph Theory and Combinatorial Optimization',
-				description: 'Coloring problems with additional conditions involving cycle structures, signed graphs, and the structural properties of related graph classes.',
+				title: 'Reinforcement Learning and Self-Improvement for Agents',
+				description: 'Studying how agents continually acquire new capabilities from interaction feedback, memory, and experience, with a focus on credit assignment in reinforcement learning, skill learning and reuse, and joint optimization of policies and memory. Exploring structured representations for organizing experience, reasoning, and continual adaptation.',
 			},
 			{
-				title: 'Skill Learning and Optimization for RL Agents',
-				description: 'Skill acquisition, retrieval, composition, and updating for reinforcement-learning agents, with an interest in jointly optimizing policies and skill libraries and using structured relations to support skill organization and reasoning.',
+				title: 'Structural Graph Theory and Combinatorial Optimization',
+				description: 'Coloring problems with additional conditions involving cycle structures, signed graphs, and the structural properties of related graph classes.',
 			},
 		],
 		internshipsTitle: 'Research Experience',
