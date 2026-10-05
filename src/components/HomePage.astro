@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 import thunlpLogo from '../assets/experience/thunlp-logo.png';
 import { educationLogos } from '../data/education-branding';
-import { advisorUrl, githubUrl, homeContent, publicEmail, type Locale } from '../data/site';
+import { advisorUrl, githubUrl, homeContent, nankaiMathUrl, publicEmail, type Locale } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from './Header.astro';
 import ProfileSidebar from './ProfileSidebar.astro';
@@ -31,8 +31,12 @@ const educationBase = locale === 'zh' ? '/zh/education' : '/education';
 				<span class="anchor" id="about"></span>
 				<h2 id="about-title"><span class="section-heading__icon" aria-hidden="true">👋</span>{content.aboutTitle}</h2>
 				<p>
-					{content.intro.beforeAdvisor}<a class="about-advisor-link" href={advisorUrl} target="_blank" rel="noreferrer">{content.intro.advisorLabel}</a>{content.intro.beforeK}<em>k</em>{content.intro.afterK}
+					{content.intro.beforeInstitution}<a class="about-link" href={nankaiMathUrl} target="_blank" rel="noreferrer">{content.intro.institutionLabel}</a>{content.intro.beforeAdvisor}<a class="about-link" href={advisorUrl} target="_blank" rel="noreferrer">{content.intro.advisorLabel}</a>{content.intro.afterAdvisor}
 				</p>
+				<p>
+					{content.intro.research.before}<strong>{content.intro.research.selfImprovement}</strong>{content.intro.research.between}<strong>{content.intro.research.reinforcementLearning}</strong>{content.intro.research.after}
+				</p>
+				<p>{content.intro.background}</p>
 			</section>
 
 			<section class="content-section" aria-labelledby="experience-heading">

@@ -469,14 +469,14 @@ html[lang='en'] .profile-copy h1 {
 	font-size: 1.01rem;
 }
 
-.about-advisor-link {
+.about-link {
 	color: var(--resource-link);
 	font-weight: 650;
 	text-decoration: none;
 }
 
-.about-advisor-link:hover,
-.about-advisor-link:focus-visible {
+.about-link:hover,
+.about-link:focus-visible {
 	color: var(--resource-link);
 	text-decoration: none;
 }
