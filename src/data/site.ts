@@ -238,7 +238,7 @@ export const homeContent = {
 			afterAdvisor: '.',
 			research: {
 				before: 'My current research focuses on ',
-				selfImprovement: 'self-improving agents',
+				selfImprovement: 'self-evolving agents',
 				between: ' and ',
 				reinforcementLearning: 'reinforcement learning',
 				after: ', especially how agents can continually acquire new capabilities from feedback and memory, including questions of credit assignment. Alongside this work, my mathematical research lies in graph theory and combinatorial optimization. I study graph-coloring problems with special constraints, such as edge colorings involving rainbow cycles or forbidden subgraphs, as well as the use of combinatorial optimization tools in structural graph theory.',
@@ -248,7 +248,7 @@ export const homeContent = {
 		focusTitle: 'Research Interests',
 		focusAreas: [
 			{
-				title: 'Reinforcement Learning and Self-Improvement for Agents',
+				title: 'Reinforcement Learning and Self-Evolution for Agents',
 				description: 'Studying how agents continually acquire new capabilities from interaction feedback, memory, and experience, with a focus on credit assignment in reinforcement learning, skill learning and reuse, and joint optimization of policies and memory. Exploring structured representations for organizing experience, reasoning, and continual adaptation.',
 			},
 			{
