@@ -237,7 +237,7 @@ export const homeContent = {
 			advisorLabel: 'Prof. Jiaao Li',
 			afterAdvisor: '.',
 			research: {
-				before: 'Currently, I am primarily focused on exploring the mechanisms of ',
+				before: 'My current research focuses on exploring the mechanisms of ',
 				selfImprovement: 'self-evolution',
 				between: ' and ',
 				reinforcementLearning: 'reinforcement learning',
