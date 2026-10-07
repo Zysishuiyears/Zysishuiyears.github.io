@@ -71,7 +71,7 @@ export const homeContent = {
 			advisorLabel: '李佳傲教授',
 			afterAdvisor: '。',
 			research: {
-				before: '目前我主要致力于探索智能体的',
+				before: '目前我主要致力于智能体的',
 				selfImprovement: '自进化',
 				between: '和',
 				reinforcementLearning: '强化学习',
@@ -237,7 +237,7 @@ export const homeContent = {
 			advisorLabel: 'Prof. Jiaao Li',
 			afterAdvisor: '.',
 			research: {
-				before: 'My current research focuses on exploring the mechanisms of ',
+				before: 'My current research focuses on the mechanisms of ',
 				selfImprovement: 'self-evolution',
 				between: ' and ',
 				reinforcementLearning: 'reinforcement learning',
