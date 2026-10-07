@@ -237,18 +237,18 @@ export const homeContent = {
 			advisorLabel: 'Prof. Jiaao Li',
 			afterAdvisor: '.',
 			research: {
-				before: 'My current research focuses on ',
-				selfImprovement: 'self-evolving agents',
-				between: ' and ',
+				before: 'My current research focuses on how agents ',
+				selfImprovement: 'self-evolve',
+				between: ' and learn through ',
 				reinforcementLearning: 'reinforcement learning',
-				after: ', especially how agents can continually acquire new capabilities from feedback and memory, including questions of credit assignment. Alongside this work, my mathematical research lies in graph theory and combinatorial optimization. I study graph-coloring problems with special constraints, such as edge colorings involving rainbow cycles or forbidden subgraphs, as well as the use of combinatorial optimization tools in structural graph theory.',
+				after: ', particularly how they continually acquire new capabilities from feedback and memory and how to assign credit throughout this process. Alongside this work, my mathematical research lies in graph theory and combinatorial optimization. I study graph-coloring problems with special constraints, such as edge colorings involving rainbow cycles or forbidden subgraphs, as well as the use of combinatorial optimization tools in structural graph theory.',
 			},
 			background: 'I graduated from Ocean University of China with an honors bachelor’s degree in mathematics, where I worked on dynamic modeling over complex networks, including information flow on graphs and the evolution of entity states, to address problems with practical significance. If you are interested in these areas, please feel free to contact me!',
 		},
 		focusTitle: 'Research Interests',
 		focusAreas: [
 			{
-				title: 'Reinforcement Learning and Self-Evolution for Agents',
+				title: 'Reinforcement Learning and Self-Evolution in Agents',
 				description: 'Studying how agents continually acquire new capabilities from interaction feedback, memory, and experience, with a focus on credit assignment in reinforcement learning, skill learning and reuse, and joint optimization of policies and memory. Exploring structured representations for organizing experience, reasoning, and continual adaptation.',
 			},
 			{
